@@ -14,13 +14,13 @@ if (!class_exists('Redux')) {
     return;
 }
 
-if (!defined('BEETEAM368_PREFIX')) {
-    define('BEETEAM368_PREFIX', 'beeteam368');
+if (!defined(''beeteam368'')) {
+    define(''beeteam368'', 'beeteam368');
 }
 
 //load_theme_textdomain('vidmov', get_template_directory() . '/languages');
 
-$beeteam368_opt_name = apply_filters(BEETEAM368_PREFIX . '_theme_options/opt_name', BEETEAM368_PREFIX . '_theme_options');
+$beeteam368_opt_name = apply_filters('beeteam368' . '_theme_options/opt_name', 'beeteam368' . '_theme_options');
 $beeteam368_theme = wp_get_theme();
 
 $beeteam368_opts_args = array(
@@ -37,17 +37,17 @@ $beeteam368_opts_args = array(
     'admin_bar' => true,
     'admin_bar_icon' => 'dashicons-portfolio',
     'admin_bar_priority' => 50,
-    'global_variable' => BEETEAM368_PREFIX . '_theme_options',
+    'global_variable' => 'beeteam368' . '_theme_options',
     'dev_mode' => false,
     'update_notice' => false,
     'customizer' => true,
     'page_priority' => 3,
     'page_parent' => '',
-    'page_permissions' => BEETEAM368_PREFIX . '_theme_options',
+    'page_permissions' => 'beeteam368' . '_theme_options',
     'menu_icon' => '',
     'last_tab' => '',
     'page_icon' => 'icon-themes',
-    'page_slug' => BEETEAM368_PREFIX . '_theme_options',
+    'page_slug' => 'beeteam368' . '_theme_options',
     'save_defaults' => true,
     'default_show' => false,
     'default_mark' => '',
@@ -79,21 +79,21 @@ Redux::setArgs($beeteam368_opt_name, $beeteam368_opts_args);
 /*global*/
 $beeteam368_to_global = apply_filters('beeteam368_to_global', array(
     array(
-        'id' => BEETEAM368_PREFIX . '_rtl',
+        'id' => 'beeteam368' . '_rtl',
         'type' => 'switch',
         'title' => esc_html__('RTL Mode', 'vidmov'),
         'desc' => esc_html__('Enable/Disable Right-to-Left language', 'vidmov'),
         'default' => false,
     ),
     array(
-        'id' => BEETEAM368_PREFIX . '_lazyload',
+        'id' => 'beeteam368' . '_lazyload',
         'type' => 'switch',
         'title' => esc_html__('Lazyload Images', 'vidmov'),
         'desc' => esc_html__('Enable/Disable Lazyload Images', 'vidmov'),
         'default' => false,
     ),
     array(
-        'id' => BEETEAM368_PREFIX . '_number_format',
+        'id' => 'beeteam368' . '_number_format',
         'type' => 'select',
         'title' => esc_html__('Number Format', 'vidmov'),
         'desc' => esc_html__('Converts a number into a short version, eg: 1000 -> 1k', 'vidmov'),
@@ -107,7 +107,7 @@ $beeteam368_to_global = apply_filters('beeteam368_to_global', array(
         ),
     ),
     array(
-        'id' => BEETEAM368_PREFIX . '_datetime_format',
+        'id' => 'beeteam368' . '_datetime_format',
         'type' => 'select',
         'title' => esc_html__('DateTime Format', 'vidmov'),
         'default' => 'default',
@@ -120,7 +120,7 @@ $beeteam368_to_global = apply_filters('beeteam368_to_global', array(
         ),
     ),
 	array(
-        'id' => BEETEAM368_PREFIX . '_nav_breadcrumbs',
+        'id' => 'beeteam368' . '_nav_breadcrumbs',
         'type' => 'switch',
         'title' => esc_html__('Breadcrumbs', 'vidmov'),
         'desc' => esc_html__('Enable/Disable Breadcrumbs.', 'vidmov'),
@@ -128,7 +128,7 @@ $beeteam368_to_global = apply_filters('beeteam368_to_global', array(
     ),
 	
 	array(
-		'id' 		=> BEETEAM368_PREFIX . '_exclude_page_in_search',
+		'id' 		=> 'beeteam368' . '_exclude_page_in_search',
 		'type'	 	=> 'switch',
 		'title' 	=> esc_html__('Exclude Pages from Search Results', 'vidmov'),		
 		'default' 	=> true,
@@ -136,7 +136,7 @@ $beeteam368_to_global = apply_filters('beeteam368_to_global', array(
 ));
 Redux::setSection($beeteam368_opt_name, array(
     'title' => esc_html__('Global Settings', 'vidmov'),
-    'id' => BEETEAM368_PREFIX . '_global',
+    'id' => 'beeteam368' . '_global',
     'icon' => 'el el-globe-alt',
     'fields' => $beeteam368_to_global,
 ));
@@ -174,14 +174,14 @@ add_filter('beeteam368_register_sidebar_plugin_settings', 'beeteam368_all_sideba
 
 $beeteam368_to_styling = apply_filters('beeteam368_to_styling', array(
     array(
-        'id' => BEETEAM368_PREFIX . '_full_width_mode',
+        'id' => 'beeteam368' . '_full_width_mode',
         'type' => 'switch',
         'title' => esc_html__('Full-Width Mode', 'vidmov'),
         'desc' => esc_html__('Enable/Disable Full-Width Mode.', 'vidmov'),
         'default' => false,
     ),
     array(
-        'id' => BEETEAM368_PREFIX . '_theme_sidebar',
+        'id' => 'beeteam368' . '_theme_sidebar',
         'type' => 'image_select',
         'title' => esc_html__('Sidebar', 'vidmov'),
         'desc' => esc_html__('Select Sidebar Appearance.', 'vidmov'),
@@ -189,7 +189,7 @@ $beeteam368_to_styling = apply_filters('beeteam368_to_styling', array(
         'options' => $beeteam368_all_sidebar_positions,
     ),
     array(
-        'id' => BEETEAM368_PREFIX . '_light_dark_mode',
+        'id' => 'beeteam368' . '_light_dark_mode',
         'type' => 'select',
         'title' => esc_html__('Color Mode', 'vidmov'),
         'desc' => esc_html__('Choose a default color mode.', 'vidmov'),
@@ -203,35 +203,35 @@ $beeteam368_to_styling = apply_filters('beeteam368_to_styling', array(
         ),
     ),
 	array(
-		'id' => BEETEAM368_PREFIX . '_main_color',
+		'id' => 'beeteam368' . '_main_color',
 		'type' => 'color',
 		'title' => esc_html__('Main Skin Color', 'vidmov'),
 		'desc' => esc_html__('Choose main skin color', 'vidmov'),
 		'transparent' => false
 	),			
 	array(
-		'id' => BEETEAM368_PREFIX . '_sub_color',
+		'id' => 'beeteam368' . '_sub_color',
 		'type' => 'color',
 		'title' => esc_html__('Sub Skin Color', 'vidmov'),
 		'desc' => esc_html__('Choose sub skin color', 'vidmov'),
 		'transparent' => false
 	),
 	array(
-		'id' => BEETEAM368_PREFIX . '_main_color_dark',
+		'id' => 'beeteam368' . '_main_color_dark',
 		'type' => 'color',
 		'title' => esc_html__('[Dark Mode] Main Skin Color', 'vidmov'),
 		'desc' => esc_html__('Choose main skin color', 'vidmov'),
 		'transparent' => false
 	),			
 	array(
-		'id' => BEETEAM368_PREFIX . '_sub_color_dark',
+		'id' => 'beeteam368' . '_sub_color_dark',
 		'type' => 'color',
 		'title' => esc_html__('[Dark Mode] Sub Skin Color', 'vidmov'),
 		'desc' => esc_html__('Choose sub skin color', 'vidmov'),
 		'transparent' => false
 	),
     array(
-        'id' => BEETEAM368_PREFIX . '_light_dark_btn',
+        'id' => 'beeteam368' . '_light_dark_btn',
         'type' => 'switch',
         'title' => esc_html__('Light/Dark Mode Button', 'vidmov'),
         'desc' => esc_html__('Enable/Disable Light/Dark Mode Button.', 'vidmov'),
@@ -240,7 +240,7 @@ $beeteam368_to_styling = apply_filters('beeteam368_to_styling', array(
 ));
 Redux::setSection($beeteam368_opt_name, array(
     'title' => esc_html__('Styling', 'vidmov'),
-    'id' => BEETEAM368_PREFIX . '_styling',
+    'id' => 'beeteam368' . '_styling',
     'icon' => 'el el-brush',
     'fields' => $beeteam368_to_styling,
 ));
@@ -249,7 +249,7 @@ Redux::setSection($beeteam368_opt_name, array(
 /*header*/
 $beeteam368_to_header_settings = apply_filters('beeteam368_to_header_settings', array(
     array(
-        'id' => BEETEAM368_PREFIX . '_nav_layout',
+        'id' => 'beeteam368' . '_nav_layout',
         'type' => 'image_select',
         'title' => esc_html__('Main Navigation Style', 'vidmov'),
         'desc' => esc_html__('Choose a style for the main navigation bar.', 'vidmov'),
@@ -289,7 +289,7 @@ $beeteam368_to_header_settings = apply_filters('beeteam368_to_header_settings', 
     ),
 	
 	array(
-        'id' => BEETEAM368_PREFIX . '_sticky_menu',
+        'id' => 'beeteam368' . '_sticky_menu',
         'type' => 'switch',
         'title' => esc_html__('Sticky Menu', 'vidmov'),
         'desc' => esc_html__('Enable/Disable Sticky Menu.', 'vidmov'),
@@ -297,7 +297,7 @@ $beeteam368_to_header_settings = apply_filters('beeteam368_to_header_settings', 
     ),
 	
 	array(
-		'id' => BEETEAM368_PREFIX . '_header_banner',
+		'id' => 'beeteam368' . '_header_banner',
 		'type' => 'media',
 		'title' => esc_html__('Header Banner', 'vidmov'),
 		'desc' => esc_html__('Use only with Marguerite Header layout.', 'vidmov'),
@@ -306,19 +306,19 @@ $beeteam368_to_header_settings = apply_filters('beeteam368_to_header_settings', 
 		'url' => true,
 	),
 	array(
-        'id' => BEETEAM368_PREFIX . '_header_banner_url',
+        'id' => 'beeteam368' . '_header_banner_url',
         'type' => 'text',
         'title' => esc_html__('[Header Banner] - Link Target', 'vidmov'),
 		'validate' => 'url'
     ),
 	array(
-		'id' 		=> BEETEAM368_PREFIX . '_header_background',
+		'id' 		=> 'beeteam368' . '_header_background',
 		'type'	 	=> 'background',
 		'title' 	=> esc_html__('Header Background', 'vidmov'),
 		'desc' 		=> esc_html__('Use only with Leilani Header layout.', 'vidmov'),
 	),
     array(
-        'id' => BEETEAM368_PREFIX . '_text_logo',
+        'id' => 'beeteam368' . '_text_logo',
         'type' => 'text',
         'title' => esc_html__('Text Logo', 'vidmov'),
         'desc' => esc_html__('If you don\'t have a logo yet, this text will be used instead.', 'vidmov'),
@@ -326,13 +326,13 @@ $beeteam368_to_header_settings = apply_filters('beeteam368_to_header_settings', 
     ),
 
     array(
-        'id' 			=> BEETEAM368_PREFIX . '_main_light_logo_section',
+        'id' 			=> 'beeteam368' . '_main_light_logo_section',
         'type'	 		=> 'section',
         'title' 		=> esc_html__('Light Mode - Logo Settings', 'vidmov'),
         'indent'        => true
     ),
         array(
-            'id' => BEETEAM368_PREFIX . '_main_logo',
+            'id' => 'beeteam368' . '_main_logo',
             'type' => 'media',
             'title' => esc_html__('Logo', 'vidmov'),
             'desc' => esc_html__('Upload your logo image', 'vidmov'),
@@ -341,7 +341,7 @@ $beeteam368_to_header_settings = apply_filters('beeteam368_to_header_settings', 
             'url' => true,
         ),
         array(
-            'id' => BEETEAM368_PREFIX . '_main_logo_retina',
+            'id' => 'beeteam368' . '_main_logo_retina',
             'type' => 'media',
             'title' => esc_html__('Logo (Retina)', 'vidmov'),
             'desc' => esc_html__('Retina logo should be two time bigger than the custom logo. Retina Logo is optional, use this setting if you want to strictly support retina devices', 'vidmov'),
@@ -351,7 +351,7 @@ $beeteam368_to_header_settings = apply_filters('beeteam368_to_header_settings', 
         ),
 
         array(
-            'id' => BEETEAM368_PREFIX . '_main_logo_mobile',
+            'id' => 'beeteam368' . '_main_logo_mobile',
             'type' => 'media',
             'title' => esc_html__('Logo on mobile devices', 'vidmov'),
             'desc' => esc_html__('Upload your logo image for mobile devices', 'vidmov'),
@@ -360,7 +360,7 @@ $beeteam368_to_header_settings = apply_filters('beeteam368_to_header_settings', 
             'url' => true,
         ),
         array(
-            'id' => BEETEAM368_PREFIX . '_main_logo_mobile_retina',
+            'id' => 'beeteam368' . '_main_logo_mobile_retina',
             'type' => 'media',
             'title' => esc_html__('Logo on mobile devices (Retina)', 'vidmov'),
             'desc' => esc_html__('Retina logo should be two time bigger than the custom logo. Retina Logo is optional, use this setting if you want to strictly support retina devices', 'vidmov'),
@@ -370,7 +370,7 @@ $beeteam368_to_header_settings = apply_filters('beeteam368_to_header_settings', 
         ),
 
         array(
-            'id' => BEETEAM368_PREFIX . '_side_logo',
+            'id' => 'beeteam368' . '_side_logo',
             'type' => 'media',
             'title' => esc_html__('Side Menu Logo', 'vidmov'),
             'desc' => esc_html__('Upload your logo image for Side Menu', 'vidmov'),
@@ -379,7 +379,7 @@ $beeteam368_to_header_settings = apply_filters('beeteam368_to_header_settings', 
             'url' => true,
         ),
         array(
-            'id' => BEETEAM368_PREFIX . '_side_logo_retina',
+            'id' => 'beeteam368' . '_side_logo_retina',
             'type' => 'media',
             'title' => esc_html__('Side Menu Logo (Retina)', 'vidmov'),
             'desc' => esc_html__('Retina logo should be two time bigger than the custom logo. Retina Logo is optional, use this setting if you want to strictly support retina devices', 'vidmov'),
@@ -388,19 +388,19 @@ $beeteam368_to_header_settings = apply_filters('beeteam368_to_header_settings', 
             'url' => true,
         ),
     array(
-        'id' 			=> BEETEAM368_PREFIX . '_main_light_logo_section_end',
+        'id' 			=> 'beeteam368' . '_main_light_logo_section_end',
         'type'	 		=> 'section',
         'indent'        => false
     ),
 
     array(
-        'id' 			=> BEETEAM368_PREFIX . '_main_dark_logo_section',
+        'id' 			=> 'beeteam368' . '_main_dark_logo_section',
         'type'	 		=> 'section',
         'title' 		=> esc_html__('Dark Mode - Logo Settings', 'vidmov'),
         'indent'        => true
     ),
         array(
-            'id' => BEETEAM368_PREFIX . '_main_logo_dark',
+            'id' => 'beeteam368' . '_main_logo_dark',
             'type' => 'media',
             'title' => esc_html__('Logo', 'vidmov'),
             'desc' => esc_html__('Upload your logo image', 'vidmov'),
@@ -409,7 +409,7 @@ $beeteam368_to_header_settings = apply_filters('beeteam368_to_header_settings', 
             'url' => true,
         ),
         array(
-            'id' => BEETEAM368_PREFIX . '_main_logo_retina_dark',
+            'id' => 'beeteam368' . '_main_logo_retina_dark',
             'type' => 'media',
             'title' => esc_html__('Logo (Retina)', 'vidmov'),
             'desc' => esc_html__('Retina logo should be two time bigger than the custom logo. Retina Logo is optional, use this setting if you want to strictly support retina devices', 'vidmov'),
@@ -419,7 +419,7 @@ $beeteam368_to_header_settings = apply_filters('beeteam368_to_header_settings', 
         ),
 
         array(
-            'id' => BEETEAM368_PREFIX . '_main_logo_mobile_dark',
+            'id' => 'beeteam368' . '_main_logo_mobile_dark',
             'type' => 'media',
             'title' => esc_html__('Logo on mobile devices', 'vidmov'),
             'desc' => esc_html__('Upload your logo image for mobile devices', 'vidmov'),
@@ -428,7 +428,7 @@ $beeteam368_to_header_settings = apply_filters('beeteam368_to_header_settings', 
             'url' => true,
         ),
         array(
-            'id' => BEETEAM368_PREFIX . '_main_logo_mobile_retina_dark',
+            'id' => 'beeteam368' . '_main_logo_mobile_retina_dark',
             'type' => 'media',
             'title' => esc_html__('Logo on mobile devices (Retina)', 'vidmov'),
             'desc' => esc_html__('Retina logo should be two time bigger than the custom logo. Retina Logo is optional, use this setting if you want to strictly support retina devices', 'vidmov'),
@@ -438,7 +438,7 @@ $beeteam368_to_header_settings = apply_filters('beeteam368_to_header_settings', 
         ),
 
         array(
-            'id' => BEETEAM368_PREFIX . '_side_logo_dark',
+            'id' => 'beeteam368' . '_side_logo_dark',
             'type' => 'media',
             'title' => esc_html__('Side Menu Logo', 'vidmov'),
             'desc' => esc_html__('Upload your logo image for Side Menu', 'vidmov'),
@@ -447,7 +447,7 @@ $beeteam368_to_header_settings = apply_filters('beeteam368_to_header_settings', 
             'url' => true,
         ),
         array(
-            'id' => BEETEAM368_PREFIX . '_side_logo_retina_dark',
+            'id' => 'beeteam368' . '_side_logo_retina_dark',
             'type' => 'media',
             'title' => esc_html__('Side Menu Logo (Retina)', 'vidmov'),
             'desc' => esc_html__('Retina logo should be two time bigger than the custom logo. Retina Logo is optional, use this setting if you want to strictly support retina devices', 'vidmov'),
@@ -456,20 +456,20 @@ $beeteam368_to_header_settings = apply_filters('beeteam368_to_header_settings', 
             'url' => true,
         ),
     array(
-        'id' 			=> BEETEAM368_PREFIX . '_main_dark_logo_section_end',
+        'id' 			=> 'beeteam368' . '_main_dark_logo_section_end',
         'type'	 		=> 'section',
         'indent'        => false
     ),
 
     array(
-        'id' => BEETEAM368_PREFIX . '_side_menu',
+        'id' => 'beeteam368' . '_side_menu',
         'type' => 'switch',
         'title' => esc_html__('Side Menu', 'vidmov'),
         'desc' => esc_html__('Enable/Disable Side Menu.', 'vidmov'),
         'default' => true,
     ),
     array(
-        'id' => BEETEAM368_PREFIX . '_side_menu_status',
+        'id' => 'beeteam368' . '_side_menu_status',
         'type' => 'select',
         'title' => esc_html__('Default Status for Side Menu', 'vidmov'),
         'desc' => esc_html__('Choose a default status for the side menu. Applicable to minimum width screens: 1366px', 'vidmov'),
@@ -481,10 +481,10 @@ $beeteam368_to_header_settings = apply_filters('beeteam368_to_header_settings', 
         'select2' => array(
             'allowClear' => false
         ),
-        'required' => array(BEETEAM368_PREFIX . '_side_menu', '=', '1'),
+        'required' => array('beeteam368' . '_side_menu', '=', '1'),
     ),
     array(
-        'id' => BEETEAM368_PREFIX . '_side_menu_position',
+        'id' => 'beeteam368' . '_side_menu_position',
         'type' => 'select',
         'title' => esc_html__('Default Position for Side Menu', 'vidmov'),
         'desc' => esc_html__('Choose a default position for the side menu.', 'vidmov'),
@@ -496,20 +496,20 @@ $beeteam368_to_header_settings = apply_filters('beeteam368_to_header_settings', 
         'select2' => array(
             'allowClear' => false
         ),
-        'required' => array(BEETEAM368_PREFIX . '_side_menu', '=', '1'),
+        'required' => array('beeteam368' . '_side_menu', '=', '1'),
     ),
     array(
-        'id' => BEETEAM368_PREFIX . '_side_menu_nav',
+        'id' => 'beeteam368' . '_side_menu_nav',
         'type' => 'switch',
         'title' => esc_html__('Side Menu Navigation', 'vidmov'),
         'desc' => esc_html__('Enable/Disable Side Menu Navigation.', 'vidmov'),
         'default' => true,
-        'required' => array(BEETEAM368_PREFIX . '_side_menu', '=', '1'),
+        'required' => array('beeteam368' . '_side_menu', '=', '1'),
     ),
 ));
 Redux::setSection($beeteam368_opt_name, array(
     'title' => esc_html__('Header', 'vidmov'),
-    'id' => BEETEAM368_PREFIX . '_header_settings',
+    'id' => 'beeteam368' . '_header_settings',
     'icon' => 'el el-cog-alt',
     'fields' => $beeteam368_to_header_settings,
 ));
@@ -518,14 +518,14 @@ Redux::setSection($beeteam368_opt_name, array(
 /*footer*/
 $beeteam368_to_footer_settings = apply_filters('beeteam368_to_footer_settings', array(
     array(
-        'id' 		=> BEETEAM368_PREFIX . '_footer_copyright',
+        'id' 		=> 'beeteam368' . '_footer_copyright',
         'type'	 	=> 'editor',
         'title' 	=> esc_html__('Fotter Copyright Text', 'vidmov'),
     ),
 ));
 Redux::setSection($beeteam368_opt_name, array(
     'title' => esc_html__('Footer Settings', 'vidmov'),
-    'id' => BEETEAM368_PREFIX . '_footer_settings',
+    'id' => 'beeteam368' . '_footer_settings',
     'icon' => 'el el-cog-alt',
     'fields' => $beeteam368_to_footer_settings,
 ));
@@ -666,7 +666,7 @@ add_filter('beeteam368_elementor_slider_layouts_file', 'beeteam368_elementor_sli
 /*Blog Settings*/
 $beeteam368_to_blog_settings = apply_filters('beeteam368_to_blog_settings', array(
 	array(
-		'id' 			=> BEETEAM368_PREFIX . '_blog_full_width_mode',
+		'id' 			=> 'beeteam368' . '_blog_full_width_mode',
 		'type'	 		=> 'select',
 		'title' 		=> esc_html__('Full-Width Mode', 'vidmov'),	
 		'desc' 			=> esc_html__('Change Full-Width Mode. Select "Default" to use settings in Theme Options > Styling.', 'vidmov'),				
@@ -678,7 +678,7 @@ $beeteam368_to_blog_settings = apply_filters('beeteam368_to_blog_settings', arra
 		),		
 	),
     array(
-        'id' => BEETEAM368_PREFIX . '_archive_loop_style',
+        'id' => 'beeteam368' . '_archive_loop_style',
         'type' => 'image_select',
         'title' => esc_html__('Archive Loop Style', 'vidmov'),
         'desc' => esc_html__('Choose a style for archive pages.', 'vidmov'),
@@ -687,7 +687,7 @@ $beeteam368_to_blog_settings = apply_filters('beeteam368_to_blog_settings', arra
     ),
 	
 	array(
-        'id' => BEETEAM368_PREFIX . '_archive_sidebar',
+        'id' => 'beeteam368' . '_archive_sidebar',
         'type' => 'image_select',
         'title' => esc_html__('Sidebar', 'vidmov'),
         'desc' => esc_html__('Select Sidebar Appearance.', 'vidmov'),
@@ -696,7 +696,7 @@ $beeteam368_to_blog_settings = apply_filters('beeteam368_to_blog_settings', arra
     ),
 	
 	array(
-        'id' => BEETEAM368_PREFIX . '_nav_layout_in_archive',
+        'id' => 'beeteam368' . '_nav_layout_in_archive',
         'type' => 'image_select',
         'title' => esc_html__('Main Navigation Style', 'vidmov'),
         'desc' => esc_html__('Change header style for archive pages. Select "Default" to use settings in Theme Options > Header.', 'vidmov'),
@@ -740,63 +740,63 @@ $beeteam368_to_blog_settings = apply_filters('beeteam368_to_blog_settings', arra
     ),
 	
     array(
-        'id' => BEETEAM368_PREFIX . '_display_author',
+        'id' => 'beeteam368' . '_display_author',
         'type' => 'switch',
         'title' => esc_html__('Display Post Author', 'vidmov'),
         'default' => true,
     ),
 
     array(
-        'id' => BEETEAM368_PREFIX . '_display_excerpt',
+        'id' => 'beeteam368' . '_display_excerpt',
         'type' => 'switch',
         'title' => esc_html__('Display Post Excerpt', 'vidmov'),
         'default' => true,
     ),
 
     array(
-        'id' => BEETEAM368_PREFIX . '_display_post_categories',
+        'id' => 'beeteam368' . '_display_post_categories',
         'type' => 'switch',
         'title' => esc_html__('Display Post Categories', 'vidmov'),
         'default' => true,
     ),
 
     array(
-        'id' => BEETEAM368_PREFIX . '_display_post_published_date',
+        'id' => 'beeteam368' . '_display_post_published_date',
         'type' => 'switch',
         'title' => esc_html__('Display Post Published Date', 'vidmov'),
         'default' => true,
     ),
 
     array(
-        'id' => BEETEAM368_PREFIX . '_display_post_updated_date',
+        'id' => 'beeteam368' . '_display_post_updated_date',
         'type' => 'switch',
         'title' => esc_html__('Display Post Last Updated', 'vidmov'),
         'default' => false,
     ),
 
     array(
-        'id' => BEETEAM368_PREFIX . '_display_post_reactions',
+        'id' => 'beeteam368' . '_display_post_reactions',
         'type' => 'switch',
         'title' => esc_html__('Display Post Reactions', 'vidmov'),
         'default' => true,
     ),
 
     array(
-        'id' => BEETEAM368_PREFIX . '_display_post_comments',
+        'id' => 'beeteam368' . '_display_post_comments',
         'type' => 'switch',
         'title' => esc_html__('Display Post Comments Count', 'vidmov'),
         'default' => true,
     ),
 
     array(
-        'id' => BEETEAM368_PREFIX . '_display_post_views',
+        'id' => 'beeteam368' . '_display_post_views',
         'type' => 'switch',
         'title' => esc_html__('Display Post Views Count', 'vidmov'),
         'default' => true,
     ),
 
     array(
-        'id' => BEETEAM368_PREFIX . '_display_post_read_more',
+        'id' => 'beeteam368' . '_display_post_read_more',
         'type' => 'switch',
         'title' => esc_html__('Display Post Read More ( or: Share)', 'vidmov'),
         'default' => true,
@@ -804,7 +804,7 @@ $beeteam368_to_blog_settings = apply_filters('beeteam368_to_blog_settings', arra
     ),
 	
 	array(
-        'id' => BEETEAM368_PREFIX . '_archive_order',
+        'id' => 'beeteam368' . '_archive_order',
         'type' => 'select',
         'title' => esc_html__('Default Ordering', 'vidmov'),
         'desc' => esc_html__('Arrange display for posts in Archive Page.', 'vidmov'),
@@ -821,7 +821,7 @@ $beeteam368_to_blog_settings = apply_filters('beeteam368_to_blog_settings', arra
     ),
 	
 	array(
-        'id' => BEETEAM368_PREFIX . '_pagination',
+        'id' => 'beeteam368' . '_pagination',
         'type' => 'select',
         'title' => esc_html__('Pagination', 'vidmov'),
         'desc' => esc_html__('Choose type of navigation. For WP PageNavi, you will need to install WP PageNavi plugin.', 'vidmov'),
@@ -839,7 +839,7 @@ $beeteam368_to_blog_settings = apply_filters('beeteam368_to_blog_settings', arra
 
 Redux::setSection($beeteam368_opt_name, array(
     'title' => esc_html__('Blog Settings', 'vidmov'),
-    'id' => BEETEAM368_PREFIX . '_blog_settings',
+    'id' => 'beeteam368' . '_blog_settings',
     'icon' => 'el el-rss',
     'fields' => $beeteam368_to_blog_settings,
 ));/*Blog Settings*/
@@ -847,7 +847,7 @@ Redux::setSection($beeteam368_opt_name, array(
 /*Single Post Settings*/
 $beeteam368_to_single_post_settings = apply_filters('beeteam368_to_single_post_settings', array(
 	array(
-		'id' 			=> BEETEAM368_PREFIX . '_single_full_width_mode',
+		'id' 			=> 'beeteam368' . '_single_full_width_mode',
 		'type'	 		=> 'select',
 		'title' 		=> esc_html__('Full-Width Mode', 'vidmov'),	
 		'desc' 			=> esc_html__('Change Full-Width Mode. Select "Default" to use settings in Theme Options > Styling.', 'vidmov'),				
@@ -859,7 +859,7 @@ $beeteam368_to_single_post_settings = apply_filters('beeteam368_to_single_post_s
 		),		
 	),	
 	array(
-        'id' => BEETEAM368_PREFIX . '_single_sidebar',
+        'id' => 'beeteam368' . '_single_sidebar',
         'type' => 'image_select',
         'title' => esc_html__('Sidebar', 'vidmov'),
         'desc' => esc_html__('Select Sidebar Appearance.', 'vidmov'),
@@ -868,7 +868,7 @@ $beeteam368_to_single_post_settings = apply_filters('beeteam368_to_single_post_s
     ),
 	
 	array(
-        'id' => BEETEAM368_PREFIX . '_nav_layout_in_single',
+        'id' => 'beeteam368' . '_nav_layout_in_single',
         'type' => 'image_select',
         'title' => esc_html__('Main Navigation Style', 'vidmov'),
         'desc' => esc_html__('Change header style for single posts (& single post of any post type). Select "Default" to use settings in Theme Options > Header.', 'vidmov'),
@@ -912,84 +912,84 @@ $beeteam368_to_single_post_settings = apply_filters('beeteam368_to_single_post_s
     ),
 	
     array(
-        'id' => BEETEAM368_PREFIX . '_display_single_post_author',
+        'id' => 'beeteam368' . '_display_single_post_author',
         'type' => 'switch',
         'title' => esc_html__('Display Post Author', 'vidmov'),
         'default' => true,
     ),
 	
 	array(
-        'id' => BEETEAM368_PREFIX . '_display_single_post_categories',
+        'id' => 'beeteam368' . '_display_single_post_categories',
         'type' => 'switch',
         'title' => esc_html__('Display Post Categories', 'vidmov'),
         'default' => true,
     ),
 
     array(
-        'id' => BEETEAM368_PREFIX . '_display_single_post_published_date',
+        'id' => 'beeteam368' . '_display_single_post_published_date',
         'type' => 'switch',
         'title' => esc_html__('Display Post Published Date', 'vidmov'),
         'default' => true,
     ),
 
     array(
-        'id' => BEETEAM368_PREFIX . '_display_single_post_updated_date',
+        'id' => 'beeteam368' . '_display_single_post_updated_date',
         'type' => 'switch',
         'title' => esc_html__('Display Post Last Updated', 'vidmov'),
         'default' => false,
     ),
 
     array(
-        'id' => BEETEAM368_PREFIX . '_display_single_post_reactions',
+        'id' => 'beeteam368' . '_display_single_post_reactions',
         'type' => 'switch',
         'title' => esc_html__('Display Post Reactions', 'vidmov'),
         'default' => true,
     ),
 
     array(
-        'id' => BEETEAM368_PREFIX . '_display_single_post_comments',
+        'id' => 'beeteam368' . '_display_single_post_comments',
         'type' => 'switch',
         'title' => esc_html__('Display Post Comments Count', 'vidmov'),
         'default' => true,
     ),
 
     array(
-        'id' => BEETEAM368_PREFIX . '_display_single_post_views',
+        'id' => 'beeteam368' . '_display_single_post_views',
         'type' => 'switch',
         'title' => esc_html__('Display Post Views Count', 'vidmov'),
         'default' => true,
     ),
 	
 	array(
-        'id' => BEETEAM368_PREFIX . '_display_single_post_tags',
+        'id' => 'beeteam368' . '_display_single_post_tags',
         'type' => 'switch',
         'title' => esc_html__('Display Post Tags', 'vidmov'),
         'default' => true,
     ),
 	
 	array(
-        'id' => BEETEAM368_PREFIX . '_display_single_post_prev_next',
+        'id' => 'beeteam368' . '_display_single_post_prev_next',
         'type' => 'switch',
         'title' => esc_html__('Display Prev/Next Posts', 'vidmov'),
         'default' => true,
     ),
 	
 	array(
-        'id' => BEETEAM368_PREFIX . '_display_single_related_posts',
+        'id' => 'beeteam368' . '_display_single_related_posts',
         'type' => 'switch',
         'title' => esc_html__('Display Related Posts', 'vidmov'),
         'default' => true,
     ),
 		array(
-			'id' 		=> BEETEAM368_PREFIX . '_single_post_related_title',
+			'id' 		=> 'beeteam368' . '_single_post_related_title',
 			'type'	 	=> 'text',
 			'title' 	=> esc_html__('Related Posts - Header Title', 'vidmov'),
 			'desc' 		=> esc_html__('Enter Title for Related Posts section', 'vidmov'),
-			'required' 	=> array( BEETEAM368_PREFIX . '_display_single_related_posts', '=', '1' ),
+			'required' 	=> array( 'beeteam368' . '_display_single_related_posts', '=', '1' ),
 			'default'	=> esc_html__('Related Posts', 'vidmov'),
 		),
 		array(
-			'id' 			=> BEETEAM368_PREFIX . '_single_post_related_query',
+			'id' 			=> 'beeteam368' . '_single_post_related_query',
 			'type'	 		=> 'select',
 			'title' 		=> esc_html__('Related Posts - Query', 'vidmov'),					
 			'default' 		=> 'cats',
@@ -997,10 +997,10 @@ $beeteam368_to_single_post_settings = apply_filters('beeteam368_to_single_post_s
 				'cats' 		=> esc_html__('Querying posts from same Categories', 'vidmov'),
 				'tags'	 	=> esc_html__('Querying posts from same Tags', 'vidmov'),
 			),
-			'required' 		=> array( BEETEAM368_PREFIX . '_display_single_related_posts', '=', '1' ),
+			'required' 		=> array( 'beeteam368' . '_display_single_related_posts', '=', '1' ),
 		),		
 		array(
-			'id' 			=> BEETEAM368_PREFIX . '_single_post_related_order',
+			'id' 			=> 'beeteam368' . '_single_post_related_order',
 			'type'	 		=> 'select',
 			'title' 		=> esc_html__('Related Posts - Order By', 'vidmov'),					
 			'default' 		=> 'date',
@@ -1016,10 +1016,10 @@ $beeteam368_to_single_post_settings = apply_filters('beeteam368_to_single_post_s
 									'rand' 			=> esc_html__('Random order', 'vidmov'),																				
 									'post__in' 		=> esc_html__('Preserve post ID order', 'vidmov'),										
 								]),
-			'required' 		=> array( BEETEAM368_PREFIX . '_display_single_related_posts', '=', '1' ),
+			'required' 		=> array( 'beeteam368' . '_display_single_related_posts', '=', '1' ),
 		),
 		array(
-			'id' 			=> BEETEAM368_PREFIX . '_single_post_related_sort',
+			'id' 			=> 'beeteam368' . '_single_post_related_sort',
 			'type'	 		=> 'select',
 			'title' 		=> esc_html__('Related Posts - Sort Order', 'vidmov'),					
 			'default' 		=> 'DESC',
@@ -1027,29 +1027,29 @@ $beeteam368_to_single_post_settings = apply_filters('beeteam368_to_single_post_s
 				'DESC' 		=> esc_html__('Descending', 'vidmov'),																		
 				'ASC' 		=> esc_html__('Ascending', 'vidmov'),
 			),
-			'required' 		=> array( BEETEAM368_PREFIX . '_display_single_related_posts', '=', '1' ),
+			'required' 		=> array( 'beeteam368' . '_display_single_related_posts', '=', '1' ),
 		),
 		array(
-			'id' 			=> BEETEAM368_PREFIX . '_single_post_related_count',
+			'id' 			=> 'beeteam368' . '_single_post_related_count',
 			'type'	 		=> 'text',
 			'title' 		=> esc_html__('Related Posts - Count', 'vidmov'),
 			'desc' 			=> esc_html__('Number of related posts', 'vidmov'),
 			'default'		=> 10,
-			'required' 		=> array( BEETEAM368_PREFIX . '_display_single_related_posts', '=', '1' ),			
+			'required' 		=> array( 'beeteam368' . '_display_single_related_posts', '=', '1' ),			
 		),
 		array(
-			'id' 			=> BEETEAM368_PREFIX . '_single_post_related_loop_style',
+			'id' 			=> 'beeteam368' . '_single_post_related_loop_style',
 			'type' 			=> 'image_select',
 			'title' 		=> esc_html__('Related Posts - Loop Style', 'vidmov'),
 			'desc' 			=> esc_html__('Choose a style for related posts.', 'vidmov'),
 			'default' 		=> 'marguerite',
 			'options' 		=> $beeteam368_all_blog_layouts,
-			'required' 		=> array( BEETEAM368_PREFIX . '_display_single_related_posts', '=', '1' ),
+			'required' 		=> array( 'beeteam368' . '_display_single_related_posts', '=', '1' ),
 		),
 ));
 Redux::setSection($beeteam368_opt_name, array(
     'title' => esc_html__('Single Post Settings', 'vidmov'),
-    'id' => BEETEAM368_PREFIX . '_single_post_settings',
+    'id' => 'beeteam368' . '_single_post_settings',
     'icon' => 'el el-quote-right',
     'fields' => $beeteam368_to_single_post_settings,
 ));
@@ -1058,7 +1058,7 @@ Redux::setSection($beeteam368_opt_name, array(
 /*Search Settings*/
 $beeteam368_to_search_settings = apply_filters('beeteam368_to_search_settings', array(
 	array(
-		'id' 			=> BEETEAM368_PREFIX . '_search_full_width_mode',
+		'id' 			=> 'beeteam368' . '_search_full_width_mode',
 		'type'	 		=> 'select',
 		'title' 		=> esc_html__('Full-Width Mode', 'vidmov'),	
 		'desc' 			=> esc_html__('Change Full-Width Mode. Select "Default" to use settings in Theme Options > Styling.', 'vidmov'),				
@@ -1070,7 +1070,7 @@ $beeteam368_to_search_settings = apply_filters('beeteam368_to_search_settings', 
 		),		
 	),
     array(
-        'id' => BEETEAM368_PREFIX . '_search_loop_style',
+        'id' => 'beeteam368' . '_search_loop_style',
         'type' => 'image_select',
         'title' => esc_html__('Search Loop Style', 'vidmov'),
         'desc' => esc_html__('Choose a style for search page.', 'vidmov'),
@@ -1079,7 +1079,7 @@ $beeteam368_to_search_settings = apply_filters('beeteam368_to_search_settings', 
     ),
 	
 	array(
-        'id' => BEETEAM368_PREFIX . '_search_sidebar',
+        'id' => 'beeteam368' . '_search_sidebar',
         'type' => 'image_select',
         'title' => esc_html__('Sidebar', 'vidmov'),
         'desc' => esc_html__('Select Sidebar Appearance.', 'vidmov'),
@@ -1088,7 +1088,7 @@ $beeteam368_to_search_settings = apply_filters('beeteam368_to_search_settings', 
     ),
 	
 	array(
-        'id' => BEETEAM368_PREFIX . '_nav_layout_in_search',
+        'id' => 'beeteam368' . '_nav_layout_in_search',
         'type' => 'image_select',
         'title' => esc_html__('Main Navigation Style', 'vidmov'),
         'desc' => esc_html__('Change header style for search page. Select "Default" to use settings in Theme Options > Header.', 'vidmov'),
@@ -1132,7 +1132,7 @@ $beeteam368_to_search_settings = apply_filters('beeteam368_to_search_settings', 
     ),
 	
 	array(
-        'id' => BEETEAM368_PREFIX . '_search_order',
+        'id' => 'beeteam368' . '_search_order',
         'type' => 'select',
         'title' => esc_html__('Default Ordering', 'vidmov'),
         'desc' => esc_html__('Arrange display for posts in Search Page.', 'vidmov'),
@@ -1149,7 +1149,7 @@ $beeteam368_to_search_settings = apply_filters('beeteam368_to_search_settings', 
     ),
 	
 	array(
-        'id' => BEETEAM368_PREFIX . '_search_pagination',
+        'id' => 'beeteam368' . '_search_pagination',
         'type' => 'select',
         'title' => esc_html__('Pagination', 'vidmov'),
         'desc' => esc_html__('Choose type of navigation. For WP PageNavi, you will need to install WP PageNavi plugin. Select "Blank" to use settings in Theme Options > Blog Settings.', 'vidmov'),
@@ -1168,7 +1168,7 @@ $beeteam368_to_search_settings = apply_filters('beeteam368_to_search_settings', 
 
 Redux::setSection($beeteam368_opt_name, array(
     'title' => esc_html__('Search Settings', 'vidmov'),
-    'id' => BEETEAM368_PREFIX . '_search_settings',
+    'id' => 'beeteam368' . '_search_settings',
     'icon' => 'el el-search',
     'fields' => $beeteam368_to_search_settings,
 ));/*Search Settings*/
@@ -1176,7 +1176,7 @@ Redux::setSection($beeteam368_opt_name, array(
 /*Author Settings*/
 $beeteam368_to_author_settings = apply_filters('beeteam368_to_author_settings', array(
 	array(
-		'id' 			=> BEETEAM368_PREFIX . '_author_full_width_mode',
+		'id' 			=> 'beeteam368' . '_author_full_width_mode',
 		'type'	 		=> 'select',
 		'title' 		=> esc_html__('Full-Width Mode', 'vidmov'),	
 		'desc' 			=> esc_html__('Change Full-Width Mode. Select "Default" to use settings in Theme Options > Styling.', 'vidmov'),				
@@ -1188,7 +1188,7 @@ $beeteam368_to_author_settings = apply_filters('beeteam368_to_author_settings', 
 		),		
 	),
     array(
-        'id' => BEETEAM368_PREFIX . '_author_loop_style',
+        'id' => 'beeteam368' . '_author_loop_style',
         'type' => 'image_select',
         'title' => esc_html__('Loop Style', 'vidmov'),
         'desc' => esc_html__('Choose a style for author page.', 'vidmov'),
@@ -1197,7 +1197,7 @@ $beeteam368_to_author_settings = apply_filters('beeteam368_to_author_settings', 
     ),
 	
 	array(
-        'id' => BEETEAM368_PREFIX . '_author_sidebar',
+        'id' => 'beeteam368' . '_author_sidebar',
         'type' => 'image_select',
         'title' => esc_html__('Sidebar', 'vidmov'),
         'desc' => esc_html__('Select Sidebar Appearance.', 'vidmov'),
@@ -1206,7 +1206,7 @@ $beeteam368_to_author_settings = apply_filters('beeteam368_to_author_settings', 
     ),
 	
 	array(
-        'id' => BEETEAM368_PREFIX . '_nav_layout_in_author',
+        'id' => 'beeteam368' . '_nav_layout_in_author',
         'type' => 'image_select',
         'title' => esc_html__('Main Navigation Style', 'vidmov'),
         'desc' => esc_html__('Change header style for author page. Select "Default" to use settings in Theme Options > Blog Settings.', 'vidmov'),
@@ -1250,7 +1250,7 @@ $beeteam368_to_author_settings = apply_filters('beeteam368_to_author_settings', 
     ),
 	
 	array(
-        'id' => BEETEAM368_PREFIX . '_author_order',
+        'id' => 'beeteam368' . '_author_order',
         'type' => 'select',
         'title' => esc_html__('Default Ordering', 'vidmov'),
         'desc' => esc_html__('Arrange display for posts in author page.', 'vidmov'),
@@ -1267,7 +1267,7 @@ $beeteam368_to_author_settings = apply_filters('beeteam368_to_author_settings', 
     ),
 	
 	array(
-        'id' => BEETEAM368_PREFIX . '_author_pagination',
+        'id' => 'beeteam368' . '_author_pagination',
         'type' => 'select',
         'title' => esc_html__('Pagination', 'vidmov'),
         'desc' => esc_html__('Choose type of navigation. For WP PageNavi, you will need to install WP PageNavi plugin. Select "Blank" to use settings in Theme Options > Blog Settings.', 'vidmov'),
@@ -1286,7 +1286,7 @@ $beeteam368_to_author_settings = apply_filters('beeteam368_to_author_settings', 
 
 Redux::setSection($beeteam368_opt_name, array(
     'title' => esc_html__('Author Settings', 'vidmov'),
-    'id' => BEETEAM368_PREFIX . '_author_settings',
+    'id' => 'beeteam368' . '_author_settings',
     'icon' => 'el el-adult',
     'fields' => $beeteam368_to_author_settings,
 ));/*Author Settings*/
@@ -1298,7 +1298,7 @@ Redux::setSection($beeteam368_opt_name, array(
 		'icon'  	=> 'el el-error-alt',
 		'fields'	=>	array(
 			array(
-				'id' 			=> BEETEAM368_PREFIX . '_img_404',
+				'id' 			=> 'beeteam368' . '_img_404',
 				'type'	 		=> 'media',				
 				'title' 		=> esc_html__('404 Image', 'vidmov'),
 				'desc' 			=> esc_html__('Upload your image for 404 Page', 'vidmov'),
@@ -1307,13 +1307,13 @@ Redux::setSection($beeteam368_opt_name, array(
 				'url'			=> true,
 			),
 			array(
-				'id' 		=> BEETEAM368_PREFIX . '_content_404',
+				'id' 		=> 'beeteam368' . '_content_404',
 				'type'	 	=> 'text',
 				'title' 	=> esc_html__('404 Content', 'vidmov'),
 				'desc' 		=> esc_html__('Content of Page Not Found', 'vidmov'),
 			),
 			array(
-				'id' 		=> BEETEAM368_PREFIX . '_button_404',
+				'id' 		=> 'beeteam368' . '_button_404',
 				'type'	 	=> 'text',
 				'title' 	=> esc_html__('Back Button Text', 'vidmov'),
 				'desc' 		=> esc_html__('Text for "Back to homepage" button', 'vidmov'),
@@ -1336,7 +1336,7 @@ $beeteam368_to_typography_settings = apply_filters('beeteam368_to_typography_set
         apply_filters('beeteam368_to_typography_custom_font_family', array(), 'main'),
 
         array(
-            'id' 				=> BEETEAM368_PREFIX . '_main_font_properties',
+            'id' 				=> 'beeteam368' . '_main_font_properties',
             'type'	 			=> 'typography',
             'units'				=> 'em',
             'title' 			=> esc_html__('Font Properties', 'vidmov'),
@@ -1348,7 +1348,7 @@ $beeteam368_to_typography_settings = apply_filters('beeteam368_to_typography_set
             'subsets'           => false,
         ),
         array(
-            'id' 			=> BEETEAM368_PREFIX . '_main_font_scale',
+            'id' 			=> 'beeteam368' . '_main_font_scale',
             'type'	 		=> 'slider',
             'title' 		=> esc_html__('Font Scale', 'vidmov'),
             'desc' 			=> esc_html__('Default: 1.00', 'vidmov'),
@@ -1374,7 +1374,7 @@ $beeteam368_to_typography_settings = apply_filters('beeteam368_to_typography_set
         apply_filters('beeteam368_to_typography_custom_font_family', array(), 'heading'),
 
         array(
-            'id' 				=> BEETEAM368_PREFIX . '_heading_font_properties',
+            'id' 				=> 'beeteam368' . '_heading_font_properties',
             'type'	 			=> 'typography',
             'units'				=> 'em',
             'title' 			=> esc_html__('Font Properties', 'vidmov'),
@@ -1386,7 +1386,7 @@ $beeteam368_to_typography_settings = apply_filters('beeteam368_to_typography_set
             'subsets'           => false,
         ),
         array(
-            'id' 			=> BEETEAM368_PREFIX . '_heading_font_scale',
+            'id' 			=> 'beeteam368' . '_heading_font_scale',
             'type'	 		=> 'slider',
             'title' 		=> esc_html__('Font Scale', 'vidmov'),
             'desc' 			=> esc_html__('Default: 1.00', 'vidmov'),
@@ -1412,7 +1412,7 @@ $beeteam368_to_typography_settings = apply_filters('beeteam368_to_typography_set
         apply_filters('beeteam368_to_typography_custom_font_family', array(), 'navigation'),
 
         array(
-            'id' 				=> BEETEAM368_PREFIX . '_navigation_font_properties',
+            'id' 				=> 'beeteam368' . '_navigation_font_properties',
             'type'	 			=> 'typography',
             'units'				=> 'em',
             'title' 			=> esc_html__('Font Properties', 'vidmov'),
@@ -1424,7 +1424,7 @@ $beeteam368_to_typography_settings = apply_filters('beeteam368_to_typography_set
             'subsets'           => false,
         ),
         array(
-            'id' 			=> BEETEAM368_PREFIX . '_navigation_font_scale',
+            'id' 			=> 'beeteam368' . '_navigation_font_scale',
             'type'	 		=> 'slider',
             'title' 		=> esc_html__('Font Scale', 'vidmov'),
             'desc' 			=> esc_html__('Default: 1.00', 'vidmov'),
@@ -1450,7 +1450,7 @@ $beeteam368_to_typography_settings = apply_filters('beeteam368_to_typography_set
         apply_filters('beeteam368_to_typography_custom_font_family', array(), 'meta'),
 
         array(
-            'id' 				=> BEETEAM368_PREFIX . '_meta_font_properties',
+            'id' 				=> 'beeteam368' . '_meta_font_properties',
             'type'	 			=> 'typography',
             'units'				=> 'em',
             'title' 			=> esc_html__('Font Properties', 'vidmov'),
@@ -1462,7 +1462,7 @@ $beeteam368_to_typography_settings = apply_filters('beeteam368_to_typography_set
             'subsets'           => false,
         ),
         array(
-            'id' 			=> BEETEAM368_PREFIX . '_meta_font_scale',
+            'id' 			=> 'beeteam368' . '_meta_font_scale',
             'type'	 		=> 'slider',
             'title' 		=> esc_html__('Font Scale', 'vidmov'),
             'desc' 			=> esc_html__('Default: 1.00', 'vidmov'),
@@ -1488,7 +1488,7 @@ $beeteam368_to_typography_settings = apply_filters('beeteam368_to_typography_set
         apply_filters('beeteam368_to_typography_custom_font_family', array(), 'button'),
 
         array(
-            'id' 				=> BEETEAM368_PREFIX . '_button_font_properties',
+            'id' 				=> 'beeteam368' . '_button_font_properties',
             'type'	 			=> 'typography',
             'units'				=> 'em',
             'title' 			=> esc_html__('Font Properties', 'vidmov'),
@@ -1500,7 +1500,7 @@ $beeteam368_to_typography_settings = apply_filters('beeteam368_to_typography_set
             'subsets'           => false,
         ),
         array(
-            'id' 			=> BEETEAM368_PREFIX . '_button_font_scale',
+            'id' 			=> 'beeteam368' . '_button_font_scale',
             'type'	 		=> 'slider',
             'title' 		=> esc_html__('Font Scale', 'vidmov'),
             'desc' 			=> esc_html__('Default: 1.00', 'vidmov'),
@@ -1526,7 +1526,7 @@ $beeteam368_to_typography_settings = apply_filters('beeteam368_to_typography_set
         apply_filters('beeteam368_to_typography_custom_font_family', array(), 'input_field'),
 
         array(
-            'id' 				=> BEETEAM368_PREFIX . '_input_field_font_properties',
+            'id' 				=> 'beeteam368' . '_input_field_font_properties',
             'type'	 			=> 'typography',
             'units'				=> 'em',
             'title' 			=> esc_html__('Font Properties', 'vidmov'),
@@ -1538,7 +1538,7 @@ $beeteam368_to_typography_settings = apply_filters('beeteam368_to_typography_set
             'subsets'           => false,
         ),
         array(
-            'id' 			=> BEETEAM368_PREFIX . '_input_field_font_scale',
+            'id' 			=> 'beeteam368' . '_input_field_font_scale',
             'type'	 		=> 'slider',
             'title' 		=> esc_html__('Font Scale', 'vidmov'),
             'desc' 			=> esc_html__('Default: 1.00', 'vidmov'),
@@ -1559,7 +1559,7 @@ $beeteam368_to_typography_settings = apply_filters('beeteam368_to_typography_set
 
 Redux::setSection($beeteam368_opt_name, array(
     'title' => esc_html__('Typography', 'vidmov'),
-    'id' => BEETEAM368_PREFIX . '_typography',
+    'id' => 'beeteam368' . '_typography',
     'icon' => 'el el-fontsize',
     'fields' => $beeteam368_to_typography_settings,
 ));
