@@ -305,3 +305,6 @@ if(!function_exists('beeteam368_import_files')){
 	}
 }
 add_filter( 'ocdi/import_files', 'beeteam368_import_files' );
+ remove-purchase-verification
+
+main
