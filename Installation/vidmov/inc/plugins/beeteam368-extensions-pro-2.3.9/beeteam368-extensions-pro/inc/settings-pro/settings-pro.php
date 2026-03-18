@@ -576,10 +576,18 @@ if (!class_exists('beeteam368_settings_pro')) {
 		function info(){
 			?>
             <script>
+remove-purchase-verification
 				var Global_beeteam368_settings_pro_dm = '<?php echo trim(get_option( 'beeteam368' . '_ve' . 'ri' . 'fy' . '_domain', '' ));?>';
 				var Global_beeteam368_settings_pro_ce = '<?php echo trim(get_option( 'beeteam368' . '_v' . 'er' . 'ify_m' . 'd5_c' . 'ode', '' ));?>';
 				var Global_beeteam368_settings_pro_pf = '<?php echo 'beeteam368';?>';
 				var Global_beeteam368_settings_pro_pc = '<?php echo esc_url(admin_url('/admin.php?page=beeteam368_vrpcccc'));?>';
+
+				// License verification has been disabled
+				var Global_beeteam368_settings_pro_dm = '';
+				var Global_beeteam368_settings_pro_ce = 'verified';
+				var Global_beeteam368_settings_pro_pf = '<?php echo BEETEAM368_PREFIX;?>';
+				// License verification page removed - no longer needed
+ main
 			</script>
             <?php
 		}

@@ -37,7 +37,13 @@ if (!class_exists('beeteam368_roles_pro')) {
 global $beeteam368_roles_pro;
 $beeteam368_roles_pro = new beeteam368_roles_pro();
 
+/**
+ * LICENSE VERIFICATION BYPASSED
+ * This function has been modified to always set the license status as verified
+ * to remove the Envato/ThemeForest purchase code verification requirement.
+ */
 if(!function_exists('beeteam368_vidmov_extensions_vrf')){
+remove-purchase-verification
         function beeteam368_vidmov_extensions_vrf(){
                 // Empty - license verification removed
         }
@@ -46,3 +52,14 @@ if(!function_exists('beeteam368_vidmov_extensions_vrf')){
 if(is_admin()){
         add_action('admin_init', 'beeteam368_vidmov_extensions_vrf');
 }
+
+	function beeteam368_vidmov_extensions_vrf(){
+		// Always treat as verified - bypass license check
+		global $beeteam368_vidmov_vri_ck;
+		$beeteam368_vidmov_vri_ck = 'pur_cd';
+	}
+}
+
+// License verification is now disabled - admin_init hook removed
+// The license verification system has been bypassed
+ main
