@@ -838,16 +838,12 @@ if (!function_exists('beeteam368_ajax_verify_nonce')) :
             return true;
         }
 
-        if (!defined('BEETEAM368_PREFIX')) {
-            define('BEETEAM368_PREFIX', 'beeteam368');
-        }
-
         $beeteam368_theme = wp_get_theme();
         $beeteam368_theme_version = $beeteam368_theme->get('Version');
         $beeteam368_theme_name = $beeteam368_theme->get('Name');
 
         $require_login = $login ? 'true' : var_export(is_user_logged_in(), true);
-        if (!wp_verify_nonce(trim($nonce), BEETEAM368_PREFIX . $beeteam368_theme_version . $beeteam368_theme_name . $require_login)) {
+        if (!wp_verify_nonce(trim($nonce), 'beeteam368' . $beeteam368_theme_version . $beeteam368_theme_name . $require_login)) {
             return false;
         }
 

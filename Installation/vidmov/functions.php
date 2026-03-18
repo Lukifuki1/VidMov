@@ -98,14 +98,10 @@ if (!function_exists('beeteam368_get_option')):
     function beeteam368_get_option($option, $section, $default = '')
     {
 
-        if (!defined('BEETEAM368_PREFIX')) {
-            define('BEETEAM368_PREFIX', 'beeteam368');
-        }
+        $options = get_option('beeteam368_' . $section);
 
-        $options = get_option(BEETEAM368_PREFIX . $section);
-
-        if (isset($options[BEETEAM368_PREFIX . $option])) {
-            return $options[BEETEAM368_PREFIX . $option];
+        if (isset($options['beeteam368_' . $option])) {
+            return $options['beeteam368_' . $option];
         }
 
         return $default;
@@ -117,17 +113,13 @@ if (!function_exists('beeteam368_get_redux_option')):
     function beeteam368_get_redux_option($id, $default_value = '', $type = NULL)
     {
 
-        if (!defined('BEETEAM368_PREFIX')) {
-            define('BEETEAM368_PREFIX', 'beeteam368');
-        }
-
         global $beeteam368_theme_options;
 
-        if (isset($beeteam368_theme_options) && is_array($beeteam368_theme_options) && isset($beeteam368_theme_options[BEETEAM368_PREFIX . $id]) && $beeteam368_theme_options[BEETEAM368_PREFIX . $id] != '') {
+        if (isset($beeteam368_theme_options) && is_array($beeteam368_theme_options) && isset($beeteam368_theme_options['beeteam368_' . $id]) && $beeteam368_theme_options['beeteam368_' . $id] != '') {
 
             switch ($type) {
                 case 'switch':
-                    if ($beeteam368_theme_options[BEETEAM368_PREFIX . $id] == 1) {
+                    if ($beeteam368_theme_options['beeteam368_' . $id] == 1) {
                         return 'on';
                     } else {
                         return 'off';
@@ -135,23 +127,23 @@ if (!function_exists('beeteam368_get_redux_option')):
                     break;
 
                 case 'media_get_src':
-                    if (is_array($beeteam368_theme_options[BEETEAM368_PREFIX . $id]) && isset($beeteam368_theme_options[BEETEAM368_PREFIX . $id]['url']) && $beeteam368_theme_options[BEETEAM368_PREFIX . $id]['url'] != '') {
-                        return trim($beeteam368_theme_options[BEETEAM368_PREFIX . $id]['url']);
+                    if (is_array($beeteam368_theme_options['beeteam368_' . $id]) && isset($beeteam368_theme_options['beeteam368_' . $id]['url']) && $beeteam368_theme_options['beeteam368_' . $id]['url'] != '') {
+                        return trim($beeteam368_theme_options['beeteam368_' . $id]['url']);
                     } else {
                         return $default_value;
                     }
                     break;
 
                 case 'media_get_id':
-                    if (is_array($beeteam368_theme_options[BEETEAM368_PREFIX . $id]) && isset($beeteam368_theme_options[BEETEAM368_PREFIX . $id]['id']) && $beeteam368_theme_options[BEETEAM368_PREFIX . $id]['id'] != '') {
-                        return trim($beeteam368_theme_options[BEETEAM368_PREFIX . $id]['id']);
+                    if (is_array($beeteam368_theme_options['beeteam368_' . $id]) && isset($beeteam368_theme_options['beeteam368_' . $id]['id']) && $beeteam368_theme_options['beeteam368_' . $id]['id'] != '') {
+                        return trim($beeteam368_theme_options['beeteam368_' . $id]['id']);
                     } else {
                         return $default_value;
                     }
                     break;
             }
 
-            return $beeteam368_theme_options[BEETEAM368_PREFIX . $id];
+            return $beeteam368_theme_options['beeteam368_' . $id];
 
         }
 
@@ -167,16 +159,12 @@ if (!function_exists('beeteam368_ajax_verify_nonce')) :
             return true;
         }
 
-        if (!defined('BEETEAM368_PREFIX')) {
-            define('BEETEAM368_PREFIX', 'beeteam368');
-        }
-
         $beeteam368_theme = wp_get_theme();
         $beeteam368_theme_version = $beeteam368_theme->get('Version');
         $beeteam368_theme_name = $beeteam368_theme->get('Name');
 
         $require_login = $login ? 'true' : var_export(is_user_logged_in(), true);
-        if (!wp_verify_nonce(trim($nonce), BEETEAM368_PREFIX . $beeteam368_theme_version . $beeteam368_theme_name . $require_login)) {
+        if (!wp_verify_nonce(trim($nonce), 'beeteam368' . $beeteam368_theme_version . $beeteam368_theme_name . $require_login)) {
             return false;
         }
 
@@ -328,10 +316,6 @@ if (!function_exists('beeteam368_scripts')) :
     function beeteam368_scripts()
     {
 
-        if (!defined('BEETEAM368_PREFIX')) {
-            define('BEETEAM368_PREFIX', 'beeteam368');
-        }
-
         global $wp_query, $wp;
         $define_js_object = array();
 
@@ -462,7 +446,7 @@ if (!function_exists('beeteam368_scripts')) :
 
         $define_js_object['admin_ajax'] = esc_url(admin_url('admin-ajax.php'));
         $define_js_object['query_vars'] = $wp_query->query_vars;
-        $define_js_object['security'] = esc_attr(wp_create_nonce(BEETEAM368_PREFIX . $beeteam368_theme_version . $beeteam368_theme_name . var_export(is_user_logged_in(), true)));
+        $define_js_object['security'] = esc_attr(wp_create_nonce('beeteam368' . $beeteam368_theme_version . $beeteam368_theme_name . var_export(is_user_logged_in(), true)));
 		$define_js_object['no_more_posts_to_load_text'] = esc_html__('No More Posts To Load...', 'vidmov');
 		$define_js_object['want_to_exit_text'] = esc_html__('Are you sure you want to exit?', 'vidmov');
 		$define_js_object['processing_data_do_not_close_text'] = esc_html__('Processing data... Please do not close the browser and this popup.', 'vidmov');

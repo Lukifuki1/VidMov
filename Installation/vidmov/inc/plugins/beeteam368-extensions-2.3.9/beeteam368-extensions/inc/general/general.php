@@ -1012,7 +1012,7 @@ if (!class_exists('beeteam368_general')) {
 			
 			$define_js_object = array();
 			$define_js_object['admin_ajax'] = esc_url(admin_url('admin-ajax.php'));
-			$define_js_object['security'] = esc_attr(wp_create_nonce(BEETEAM368_PREFIX . $beeteam368_theme_version . $beeteam368_theme_name . var_export(is_user_logged_in(), true)));
+			$define_js_object['security'] = esc_attr(wp_create_nonce('beeteam368' . $beeteam368_theme_version . $beeteam368_theme_name . var_export(is_user_logged_in(), true)));
 			
 			wp_enqueue_script('beeteam368_obj_wes', $template_directory_uri . '/js/btwes.js', ['jquery'], $beeteam368_theme_version, false);			
 			wp_localize_script('beeteam368_obj_wes', 'vidmov_jav_js_object', $define_js_object);
