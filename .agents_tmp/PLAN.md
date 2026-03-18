@@ -1,3 +1,4 @@
+ vidgamify-pro-gamification-system
 # Gamifikacijski PRO Vtičnik za VidMov - Načrt
 
 ## 1. OBJECTIVE
@@ -459,3 +460,14 @@ Trenutna struktura projekta VidMov vključuje:
 **Pričakovana ekipa:** 2 developarja, 1 tester, 1 designer
 **Ocena kompleksnosti:** Visoka - zahteva podrobno načrtovanje in testiranje
 
+
+# 1. OBJECTIVE
+
+# 2. CONTEXT SUMMARY
+
+# 3. APPROACH OVERVIEW
+
+# 4. IMPLEMENTATION STEPS
+
+# 5. TESTING AND VALIDATION
+ main
