@@ -1,0 +1,1292 @@
+<!doctype html>
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>VidMov - Video & Audio Podcast WordPress Theme</title>
+<meta name="description" content="">
+<meta name="author" content="BeeTeam368">
+<meta name="copyright" content="BeeTeam368">
+<meta name="generator" content="Documenter v2.0 https://evp.to/documenter">
+<meta name="date" content="2023-12-21T00:00:00+01:00">
+<link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/jquery.scrollTo.js"></script>
+<script src="assets/js/jquery.easing.js"></script>
+<script>document.createElement('section');var duration='500',easing='swing';</script>
+<script src="assets/js/script.js"></script>
+<style>
+html {
+	background-color: #EEEEEE;
+	color: #383838;
+}
+::-moz-selection {
+background:#3C3F46;
+color:#FFFFFF;
+}
+::selection {
+	background: #3C3F46;
+	color: #FFFFFF;
+}
+#documenter_sidebar #documenter_logo {
+	margin-left: 15px;
+	margin-right: 15px;
+	width: calc(100% - 30px);
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: flex;
+	flex-flow: row wrap;
+	-webkit-flex-flow: row wrap;
+	align-items: flex-end;
+	-webkit-align-items: flex-end;
+}
+#documenter_sidebar #documenter_logo span {
+	display: block;
+}
+#documenter_sidebar #documenter_logo img {
+	border: none;
+	display: block;
+}
+a {
+	color: #DE0404;
+}
+.btn {
+	border-radius: 3px;
+}
+.btn-primary {
+	background-image: -moz-linear-gradient(top, #DE0404, #DE0404);
+	background-image: -ms-linear-gradient(top, #DE0404, #DE0404);
+ background-image: -webkit-gradient(linear, 0 0, 0 DE0404%, from(#191A1D), to(#DE0404));
+	background-image: -webkit-linear-gradient(top, #DE0404, #DE0404);
+	background-image: -o-linear-gradient(top, #DE0404, #DE0404);
+	background-image: linear-gradient(top, #DE0404, #DE0404);
+ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#DE0404', endColorstr='#DE0404', GradientType=0);
+	border-color: #DE0404 #DE0404 #bfbfbf;
+	color: #FFFFFF;
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] {
+	border-color: #DE0404 #DE0404 #bfbfbf;
+	background-color: #DE0404;
+}
+hr {
+	border-top: 1px solid #D4D4D4;
+	border-bottom: 1px solid #FFFFFF;
+}
+#documenter_sidebar, #documenter_sidebar ul a {
+	background-color: #191A1D;
+	color: #FFFFFF;
+}
+#documenter_sidebar ul a {
+	-webkit-text-shadow: 1px 1px 0px #282828;
+	-moz-text-shadow: 1px 1px 0px #282828;
+	text-shadow: 1px 1px 0px #282828;
+}
+#documenter_sidebar ul {
+	border-top: 1px solid #191A1D;
+}
+#documenter_sidebar ul a {
+	border-top: 1px solid #282828;
+	border-bottom: 1px solid #191A1D;
+	color: #FFFFFF;
+}
+#documenter_sidebar ul a:hover {
+	background: #3C3F46;
+	color: #FFFFFF;
+	border-top: 1px solid #3C3F46;
+}
+#documenter_sidebar ul a.current {
+	background: #3C3F46;
+	color: #FFFFFF;
+	border-top: 1px solid #3C3F46;
+}
+#documenter_copyright {
+	display: block !important;
+	visibility: visible !important;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	border: 2px solid #191A1D;
+}
+.page-header h3 {
+	font-weight: bold !important;
+	margin-bottom: 10px !important;
+}
+</style>
+</head>
+<body class="documenter-project-vidmov">
+<div id="documenter_sidebar"> <a href="#documenter_cover" id="documenter_logo"><span><img width="162" height="38" alt="VidMov Theme" src="assets/images/main-logo-dark.png" sizes="(max-width: 162px) 100vw, 162px" srcset="assets/images/main-logo-dark.png 162w, assets/images/main-logo-retina-dark.png 325w"></span></a>
+  <ul id="documenter_nav">
+    <li><a class="current" href="#documenter_cover">Start</a></li>
+    <li><a href="#configuration" title="Configuration">Configuration</a></li>
+    <li><a href="#import_sample_data" title="Import Sample Data">Import Sample Data</a></li>
+    <li><a href="#theme_options" title="Theme Options">Theme Options</a></li>
+    <li><a href="#theme_settings" title="Theme Settings">Theme Settings</a></li>
+    <li><a href="#video" title="Video">Video</a></li>
+    <li><a href="#block_direct_file_access" title="Video">Block Direct URL File Access</a></li>
+    <li><a href="#live_video_streaming" title="Live Video Streaming">Live Video Streaming</a></li>
+    <li><a href="#video_advertising" title="Video Advertising">Video Advertising</a></li>
+    <li><a href="#bunnystream" title="Video">Bunny Stream</a></li>
+    <li><a href="#bunnystorage" title="Audio">Bunny Storage</a></li>
+    <li><a href="#google_api_key" title="Video">Youtube API Key</a></li>
+    <li><a href="#vimeo_api_key" title="Video">Vimeo API Key</a></li>
+    <li><a href="#auto_fetch_data" title="Video">Auto Fetch Data</a></li>
+    <li><a href="#audio" title="Audio">Audio</a></li>
+    <li><a href="#playlist" title="Playlist">Playlist</a></li>
+    <li><a href="#series" title="Series">Series</a></li>
+    <li><a href="#trending" title="Trending">Trending</a></li>
+    <li><a href="#channel" title="Channel">Channel</a></li>
+    <li><a href="#video_quizzes" title="Video Quizzes">Video Quizzes</a></li>
+    <li><a href="#mycred" title="MyCred">MyCred</a></li>
+    <li><a href="#membership" title="Membership">[ARMember] Membership</a></li>
+    <li><a href="#paid_membership_pro" title="Paid Membership Pro">Paid Membership Pro</a></li>
+    <li><a href="#membership_video_ads" title="Membership Video Ads">Membership with Video Ads</a></li>
+    <li><a href="#woo_prime" title="[Woocommerce] Prime Video/Audio">[Woocommerce] Prime Video/Audio</a></li>
+    <li><a href="#woo_download" title="[Woocommerce] Premium Download">[Woocommerce] Premium Download</a></li>
+    <li><a href="#woo_prime_download" title="[Woocommerce] Combine both (Prime & Premium Download)">[Woocommerce] Combine both (Prime & Premium Download)</a></li>
+    <li><a href="#woo_mycred" title="[Woocommerce] with myCred">[Woocommerce] with myCred</a></li>
+    <li><a href="#elementor" title="Elementor">Elementor</a></li>
+    <li><a href="#update" title="Update">Update</a>
+      <ul>
+        <li><a href="#update_envato_market_plugin_installation">Envato Market Plugin Installation</a>
+        <li><a href="#update_envato_market_plugin_setup">Envato Market Plugin Setup</a>
+      </ul>
+    </li>
+  </ul>
+  <div id="documenter_copyright">Copyright BeeTeam368 2022<br>
+    made with the <a href="https://evp.to/documenter">Documenter v2.0</a> </div>
+</div>
+<div id="documenter_content">
+  <section id="documenter_cover">
+    <h1>VidMov</h1>
+    <h2>Video & Audio Podcast WordPress Theme</h2>
+    <div id="documenter_buttons"> </div>
+    <hr>
+    <ul>
+      <li>created: 01/01/2022</li>
+      <li>latest update: 12/21/2023</li>
+      <li>by: <a href="https://themeforest.net/user/beeteam368" target="_blank">BeeTeam368</a></li>
+      <li>email: <a href="mailto:&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#98;&#101;&#101;&#116;&#101;&#97;&#109;&#51;&#54;&#56;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#98;&#101;&#101;&#116;&#101;&#97;&#109;&#51;&#54;&#56;&#46;&#99;&#111;&#109;</a></li>
+    </ul>
+    <p></p>
+  </section>
+  <section id="configuration">
+    <div class="page-header">
+      <h3>Configuration</h3>
+      <hr class="notop">
+    </div>
+    <ol>
+      <li> Go to <a href="https://themeforest.net" target="_blank">ThemeForest</a> &amp; Sign in with your account</li>
+      <li> Go to Download</li>
+      <li> Download All files &amp; Documentation</li>
+      <li> Then unzip it. Installation file located in: <strong>Installation/vidmov-version-x.x.x.zip</strong></li>
+      <li> Go to Y<strong>our Website -&gt; Admin Dashboard -&gt; Navigate to Appearance -&gt; Themes</strong> page to access theme uploader screen and use <strong>vidmov-version-x.x.x.zip</strong> file:<br>
+        <img src="assets/images/doc-01.png" width="1350" height="648"><br>
+        &nbsp;</li>
+      <li> After installed successfully, click on &quot;<strong>Active</strong>&quot; to activate this theme.</li>
+      <li> VidMov comes with several plugins which will extend the theme basic functionality. Go to <strong>Appearance -&gt; Install Plugins</strong> to install recommended plugins with a single click:<br>
+        <img src="assets/images/doc-02.png" width="1350" height="910"><br>
+        &nbsp;</li>
+      <li> After installed successfully, Go to <strong>Appearance -&gt; Install Plugins</strong> to activate recommended plugins with a single click:<br>
+        <img src="assets/images/doc-03.png" width="1350" height="910"><br>
+        &nbsp;</li>
+      <li> After installed &amp; active successfully, please go back to the <strong>Dashboard</strong>.</li>
+    </ol>
+  </section>
+  <section id="import_sample_data">
+    <div class="page-header">
+      <h3>Import Sample Data</h3>
+      <hr class="notop">
+    </div>
+    <ol>
+      <li> Install <strong>One Click Demo Import</strong> plugin ( <a href="https://wordpress.org/plugins/one-click-demo-import/" target="_blank">https://wordpress.org/plugins/one-click-demo-import/</a> )</li>
+      <li> After successful installation and activation, please go to&nbsp;<strong>Appearance -&gt; Import Demo Data</strong>;<strong> c</strong>lick <strong>Import Demo Data</strong> button go to next step:<br>
+        <img src="assets/images/doc-04.png" width="1350" height="910"><br>
+        &nbsp;</li>
+      <li> Make sure these plugins are installed, if you don&#39;t already have them installed. The import process will not complete or there is not enough data:<br>
+        <img src="assets/images/doc-05.png" width="1350" height="1440"><br>
+        &nbsp;</li>
+      <li> Click <strong>Continue &amp; Import</strong> button, then wait a few minutes:<br>
+        <img src="assets/images/doc-06.png" width="1350" height="638"><br>
+        &nbsp;</li>
+      <li> This is the message when the sample data has been imported:<br>
+        <img src="assets/images/doc-07.png" width="1350" height="656"></li>
+    </ol>
+  </section>
+  <section id="theme_options">
+    <div class="page-header">
+      <h3>Theme Options</h3>
+      <hr class="notop">
+    </div>
+    <p> Below is the theme options area with global options for your theme:</p>
+    <p> <img src="assets/images/doc-08.png" width="1350" height="688"></p>
+    <ol>
+      <li>
+        <h6> <strong>Global Settings</strong></h6>
+        <ul>
+          <li> RTL Mode (Right To Left - Default is off - Only for Arabic language)</li>
+          <li> Lazyload Images (Default is off)</li>
+          <li> Numer Format&nbsp;(Default is &quot;Shorten&quot;)</li>
+          <li> DateTime Format (Default/Time Ago)</li>
+          <li> Breadcrumbs&nbsp;(Default is off)</li>
+        </ul>
+      </li>
+      <li>
+        <h6> <strong>Styling</strong></h6>
+        <ul>
+          <li> Full-Width Mode&nbsp;&nbsp;(Turn On this option if you want to use full width mode for all pages - Default is off)</li>
+          <li> Sidebar (Right/Left/Hidden - Global option, applies to all pages - Default is &quot;Right&quot;)</li>
+          <li> Color Mode (Light/Dark - Default is &quot;Light&quot;)</li>
+          <li> Main Skin Color (Change the main color for the theme - Default is &quot;Red: #de0404&quot;)</li>
+          <li> Sub Skin Color&nbsp;(Change the sub color for the theme - Default is &quot;Green: #6ac46d&quot;)</li>
+          <li> [Dark Mode] Main Skin Color (&nbsp;Change main color when entering dark mode )</li>
+          <li> [Dark Mode] Sub Skin Color&nbsp;(&nbsp;Change sub color when entering dark mode&nbsp;)</li>
+          <li> Light/Dark Mode Button (Display the button to change the light and dark mode, user can use it on the front-end.&nbsp; Default is on)</li>
+        </ul>
+      </li>
+      <li>
+        <h6> <strong>Header</strong></h6>
+        <ul>
+          <li> Main Navigation Style (There are 6 layouts: Poppy/Default/Alyssa/Leilani/Marguerite/Rose - Default is &quot;Poppy&quot; )</li>
+          <li> Header Banner (Use only with Marguerite Header layout)</li>
+          <li> [Header Banner] - Link Target&nbsp;(Use only with Marguerite Header layout)</li>
+          <li> Header Background (Use only with Leilani Header layout.)</li>
+          <li> Text Logo (If you don&#39;t have a logo image, you can use this option)</li>
+          <li> Light Mode - Logo Settings (Logo for light mode)</li>
+          <li> Dark Mode - Logo Settings&nbsp;(Logo for dark mode)</li>
+          <li> Side Menu&nbsp;(Default is on)</li>
+          <li> Default Status for Side Menu</li>
+          <li> Default Position for Side Menu</li>
+          <li> Side Menu Navigation (Show navigation bar on Side Menu - Default is on)</li>
+        </ul>
+      </li>
+      <li>
+        <h6> F<strong>ooter Settings</strong></h6>
+        <ul>
+          <li> Footer Copyright Text</li>
+        </ul>
+      </li>
+      <li>
+        <h6> <strong>Blog Settings</strong></h6>
+        <ul>
+          <li> Full-Width Mode (Turn On/OFF full-width mode for archive pages. Leave it blank to use the settings in Theme Options &gt; Styling)</li>
+          <li> Archive Loop Style (There are 6 layouts: Default/Alyssa/Leilani/Lily/Marguerite/Rose/Orchid)</li>
+          <li> Sidebar&nbsp;(Right/Left/Hidden - Default is &quot;Right&quot;)</li>
+          <li> Main Navigation Style (Change navigation layout for archive pages&nbsp;- Choose &quot;Theme Options&quot; to use settings in Theme Options &gt; Header)</li>
+          <li> Display Post Author</li>
+          <li> Display Post Excerpt</li>
+          <li> Display Post Categories</li>
+          <li> Display Post Published Date</li>
+          <li> Display Post Last Updated</li>
+          <li> Display Post Reactions</li>
+          <li> Display Post Comments Count</li>
+          <li> Display Post Views Count</li>
+          <li> Display Post Read More (or: Share)</li>
+        </ul>
+      </li>
+      <li>
+        <h6> <strong>Single Post Settings</strong></h6>
+        <ul>
+          <li> Full-Width Mode&nbsp;(Turn On/OFF full-width mode for Single posts.&nbsp;Leave it blank to use the settings in Theme Options &gt; Styling)</li>
+          <li> Sidebar</li>
+          <li> Main Navigation Style (Change navigation layout for Single posts - Choose &quot;Theme Options&quot; to use settings in Theme Options &gt; Header)</li>
+          <li> Display Post Author</li>
+          <li> Display Post Categories</li>
+          <li> Display Post Published Date</li>
+          <li> Display Post Last Updated</li>
+          <li> Display Post Reactions</li>
+          <li> Display Post Comments Count</li>
+          <li> Display Post Views Count</li>
+          <li> Display Post Tags</li>
+          <li> Display Prev/Next Posts</li>
+          <li> Display Related Posts</li>
+          <li> Related Posts - Header Title</li>
+          <li> Related Posts - Query</li>
+          <li> Related Posts - Order By</li>
+          <li> Related Posts - Sort Order</li>
+          <li> Related Posts - Count</li>
+          <li> Related Posts - Loop Style</li>
+          <li> Display Sharing Block</li>
+        </ul>
+      </li>
+      <li>
+        <h6> <strong>Search Settings</strong></h6>
+        <ul>
+          <li> Full-Width Mode&nbsp;(Turn On/OFF full-width mode for search page.&nbsp;Leave it blank to use the settings in Theme Options &gt; Styling)</li>
+          <li> Search Loop Style</li>
+          <li> Sidebar</li>
+          <li> Main Navigation Style&nbsp;(Change navigation layout for search page - Choose &quot;Theme Options&quot; to use settings in Theme Options &gt; Header)</li>
+          <li> Default Ordering</li>
+          <li> Pagination</li>
+        </ul>
+      </li>
+      <li>
+        <h6> <strong>Author Settings</strong></h6>
+        <ul>
+          <li> Full-Width Mode&nbsp;(Turn On/OFF full-width mode for author page.&nbsp;Leave it blank to use the settings in Theme Options &gt; Styling)</li>
+          <li> Author Loop Style</li>
+          <li> Sidebar</li>
+          <li> Main Navigation Style&nbsp;(Change navigation layout for author page - Choose &quot;Theme Options&quot; to use settings in Theme Options &gt; Header)</li>
+          <li> Default Ordering</li>
+          <li> Pagination</li>
+        </ul>
+      </li>
+      <li>
+        <h6> <strong>404 Page Not Found</strong></h6>
+        <ul>
+          <li> 404 Image</li>
+          <li> 404 Content</li>
+          <li> Back Button Text</li>
+        </ul>
+      </li>
+      <li>
+        <h6> <strong>Typography</strong></h6>
+        <ul>
+          <li> Main Font Settings</li>
+          <li> Heading Font Settings</li>
+          <li> Navigation Font Settings</li>
+          <li> Post Meta Font Settings</li>
+          <li> Button Font Settings</li>
+          <li> Input field Font Settings</li>
+          <li> Disable Google Fonts (This is the option to optimize font loading when using VidMov. If you are only using Custom Fonts, you can enable this option)</li>
+          <li> Custom Font Settings</li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+  <section id="theme_settings">
+    <div class="page-header">
+      <h3>Theme Settings</h3>
+      <hr class="notop">
+    </div>
+    <p> Below are the settings for the theme&#39;s feature. Most of the options are already noted, you can see the description image and compare it directly with the WordPress Dashboard to set up.</p>
+    <ol>
+      <li>
+        <h5> <strong>Theme Settings</strong></h5>
+        <ul>
+          <li> Functional Options:<br>
+            <img src="assets/images/doc-09.png" width="1350" height="2432"><br>
+            &nbsp;</li>
+          <li> Like/Dislike/Reaction Settings:<br>
+            <img src="assets/images/doc-10.png" width="1350" height="666"><br>
+            &nbsp;</li>
+          <li> Review Settings:<br>
+            <img src="assets/images/doc-11.png" width="1350" height="383"><br>
+            &nbsp;</li>
+          <li> View Settings:<br>
+            <img src="assets/images/doc-12.png" width="1350" height="383"><br>
+            &nbsp;</li>
+          <li> Trending Settings:<br>
+            <img src="assets/images/doc-13.png" width="1350" height="1320"><br>
+            &nbsp;</li>
+        </ul>
+      </li>
+      <li>
+        <h5> <strong>Video Settings</strong></h5>
+        <ul>
+          <li> General Settings:<br>
+            <img src="assets/images/doc-14.png" width="1350" height="458"><br>
+            &nbsp;</li>
+          <li> Archive Page Settings:<br>
+            <img src="assets/images/doc-15.png" width="1350" height="1457"><br>
+            &nbsp;</li>
+          <li> Single Settings:<br>
+            <img src="assets/images/doc-16.png" width="1350" height="766"><br>
+            &nbsp;</li>
+          <li> Video Main-Toolbar Settings:<br>
+            <img src="assets/images/doc-17.png" width="1350" height="848"><br>
+            &nbsp;</li>
+          <li> Player Settings:<br>
+            <img src="assets/images/doc-18.png" width="1350" height="600"><br>
+            &nbsp;</li>
+        </ul>
+      </li>
+      <li>
+        <h5> <strong>Audio Settings</strong></h5>
+        <ul>
+          <li> General Settings:<br>
+            <img src="assets/images/doc-19.png" width="1350" height="380"><br>
+            &nbsp;</li>
+          <li> Archive Page Settings:<br>
+            <img src="assets/images/doc-20.png" width="1350" height="1458"><br>
+            &nbsp;</li>
+          <li> Single Settings:<br>
+            <img src="assets/images/doc-21.png" width="1350" height="770"><br>
+            &nbsp;</li>
+          <li> Audio Main-Toolbar Settings:<br>
+            <img src="assets/images/doc-22.png" width="1350" height="666"><br>
+            &nbsp;</li>
+          <li> Player Settings:<br>
+            <img src="assets/images/doc-23.png" width="1350" height="420"><br>
+            &nbsp;</li>
+        </ul>
+      </li>
+      <li>
+        <h5> <strong>Channel Settings</strong></h5>
+        <ul>
+          <li> General Settings:<br>
+            <img src="assets/images/doc-24.png" width="1680" height="638"><br>
+            &nbsp;</li>
+          <li> Side Menu Settings:<br>
+            <img src="assets/images/doc-25.png" width="1680" height="1286"><br>
+            &nbsp;</li>
+          <li> Tab Settings:<br>
+            <img src="assets/images/doc-26.png" width="1680" height="1451"><br>
+            &nbsp;</li>
+          <li> Watch Later:<br>
+            <img src="assets/images/doc-27.png" width="1680" height="1068"><br>
+            &nbsp;</li>
+          <li> Rated Posts:<br>
+            <img src="assets/images/doc-28.png" width="1680" height="1068"><br>
+            &nbsp;</li>
+          <li> Reacted Posts:<br>
+            <img src="assets/images/doc-29.png" width="1680" height="1068"><br>
+            &nbsp;</li>
+          <li> History:<br>
+            <img src="assets/images/doc-30.png" width="1680" height="1068"><br>
+            &nbsp;</li>
+          <li> Videos:<br>
+            <img src="assets/images/doc-31.png" width="1680" height="1068"><br>
+            &nbsp;</li>
+          <li> Audios:<br>
+            <img src="assets/images/doc-32.png" width="1680" height="1068"><br>
+            &nbsp;</li>
+          <li> Playlists:<br>
+            <img src="assets/images/doc-33.png" width="1680" height="1068"><br>
+            &nbsp;</li>
+          <li> Posts:<br>
+            <img src="assets/images/doc-34.png" width="1680" height="1068"><br>
+            &nbsp;</li>
+          <li> Subscriptions:<br>
+            <img src="assets/images/doc-35.png" width="1680" height="383"><br>
+            &nbsp;</li>
+          <li> Notifications:<br>
+            <img src="assets/images/doc-36.png" width="1680" height="920"><br>
+            &nbsp;</li>
+        </ul>
+      </li>
+      <li>
+        <h5> <strong>Playlist Settings</strong></h5>
+        <ul>
+          <li> General Settings:<br>
+            <img src="assets/images/doc-37.png" width="1350" height="383"><br>
+            &nbsp;</li>
+          <li> Archive Page Settings:<br>
+            <img src="assets/images/doc-38.png" width="1350" height="1455"><br>
+            &nbsp;</li>
+          <li> Single Settings:<br>
+            <img src="assets/images/doc-39.png" width="1350" height="800"><br>
+            &nbsp;</li>
+        </ul>
+      </li>
+      <li>
+        <h5> <strong>Series Settings</strong></h5>
+        <ul>
+          <li> General Settings:<br>
+            <img src="assets/images/doc-40.png" width="1350" height="383"><br>
+            &nbsp;</li>
+          <li> Archive Page Settings:<br>
+            <img src="assets/images/doc-41.png" width="1350" height="1447"><br>
+            &nbsp;</li>
+          <li> Single Settings:<br>
+            <img src="assets/images/doc-42.png" width="1350" height="800"><br>
+            &nbsp;</li>
+        </ul>
+      </li>
+      <li>
+        <h5> <strong>Cast Settings</strong></h5>
+        <ul>
+          <li> General Settings:<br>
+            <img src="assets/images/doc-43.png" width="1350" height="383"><br>
+            &nbsp;</li>
+          <li> Archive Page Settings:<br>
+            <img src="assets/images/doc-44.png" width="1350" height="1359"><br>
+            &nbsp;</li>
+          <li> Single Settings:<br>
+            <img src="assets/images/doc-45.png" width="1350" height="1447"><br>
+            &nbsp;</li>
+          <li> Clone Settings (&nbsp;Create more new variations ):<br>
+            <img src="assets/images/doc-46.png" width="1350" height="1033"><br>
+            &nbsp;</li>
+        </ul>
+      </li>
+      <li>
+        <h5> <strong>User Submit Settings</strong></h5>
+        <ul>
+          <li> Settings:<br>
+            <img src="assets/images/doc-47.png" width="1350" height="848"><br>
+            &nbsp;</li>
+        </ul>
+      </li>
+      <li>
+        <h5> <strong>Image Settings</strong></h5>
+        <ul>
+          <li> Settings:<br>
+            <img src="assets/images/doc-48.png" width="1350" height="1300"></li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+  <section id="video">
+    <div class="page-header">
+      <h3>Video</h3>
+      <hr class="notop">
+    </div>
+    <p> The theme feature already supports format recognition based on file extension or links to video networks like Youtube, Vimeo, Dailymotion. Therefore, you just need to set up with the default options without having to change them.&nbsp;</p>
+    <p> <em>If you still have questions or need further assistance and suggestions, contact us through the support tab.</em></p>
+    <p> <strong>Self-Hosted Video:</strong><br>
+      <img src="assets/images/doc-49.png" width="1600" height="4033"></p>
+    <p> <strong>Youtube Video:</strong><br>
+      <img src="assets/images/doc-50.png" width="1600" height="770"></p>
+    <p> <strong>Vimeo Video:</strong><br>
+      <img src="assets/images/doc-51.png" width="1600" height="770"></p>
+    <p> <strong>Dailymotion Video:</strong><br>
+      <img src="assets/images/doc-52.png" width="1600" height="770"></p>
+    <p> <strong>HLS (.m3u8) Streams:</strong><br>
+      <img src="assets/images/doc-53.png" width="1600" height="770"></p>
+    <p> <strong>Embed - Facebook (Iframe):</strong><br>
+      <img src="assets/images/doc-54.png" width="1600" height="770"></p>
+    <p> <strong>Embed - Wistia</strong><br>
+      <img src="assets/images/doc-55.png" width="1600" height="770"></p>
+    <p> <strong>Embed - Google Drive (Iframe):</strong><br>
+      <img src="assets/images/doc-56.png" width="1600" height="770"></p>
+    <p> <strong>Embed - CloudFlare (Script):</strong><br>
+      <img src="assets/images/doc-57.png" width="1600" height="770"></p>
+    <p> <strong>Multi-Links:</strong><br>
+      <img src="assets/images/doc-58.png" width="1600" height="770"></p>
+    <p> <strong>Time-Lapse (Seek-To):</strong><br>
+      <img src="assets/images/doc-59.png" width="1600" height="1210"></p>
+    <p> <strong>Subtitles</strong> (Only support self-hosted videos, Youtube, Vimeo & Dailymotion):<br>
+      <img src="assets/images/doc-60.png" width="1600" height="1280"></p>
+  </section>
+    
+    <section id="block_direct_file_access">
+        <div class="page-header">
+          <h3>Block Direct URL File Access</h3>
+          <hr class="notop">
+        </div>
+        
+        <p>If enabled, direct access to your files without a referer header will be blocked. All files will need to come from one of the allowed referrers.</p>
+        
+        <p> <strong>Toggle this option:</strong><br>
+          <img src="assets/images/doc-173.png" width="1600" height="896"></p><br><br>
+        
+        <p>If you use CloudFlare and don't want your video or image files to be accessed directly from the CloudFlare cache server, create a rule like this:</p>
+        
+        <p> <strong>Cloudflare Cache Rules:</strong><br>
+          <img src="assets/images/doc-174.png" width="1600" height="1100"></p><br><br>
+    </section>
+  
+  <section id="live_video_streaming">
+    <div class="page-header">
+      <h3>Live Video Streaming</h3>
+      <hr class="notop">
+    </div>
+    
+    <ol>
+    	<li> <strong>Go to: </strong><a href="https://wpstream.net/" target="_blank"><strong>https://wpstream.net/</strong></a><br><br></li>
+      	<li> <strong>Register an account.</strong> <br><img src="assets/images/doc-170.png" width="1350" height="800"><br><br></li>
+        <li> <strong>After successful account registration, you can sign up for a free trial by clicking the "Send Confirmation Link" button to confirm your email address and get an extra 5GB of streaming data.</strong> <br><img src="assets/images/doc-171.png" width="1350" height="767"><br><br></li>
+        <li> <strong>And here are WPStream's paid plans:</strong> </strong><a href="https://wpstream.net/pricing/" target="_blank"><strong>https://wpstream.net/pricing/</strong></a><br><br></li>
+        <li> <strong>Enter your account and password to authenticate with WPStream ( <em>Note: your website needs to use SSL protocol (https://)</em> )</strong> <br><img src="assets/images/doc-172.png" width="1350" height="910"><br><br></li>
+        <li> <strong>Ok, as simple as that. Next step, take a moment to watch this video to understand how it works</strong> <a href="https://www.youtube.com/watch?v=f09gKm4tsLY" target="_blank"><strong>https://www.youtube.com/watch?v=f09gKm4tsLY</strong></a><br>
+        <iframe width="960" height="540" src="https://www.youtube.com/embed/f09gKm4tsLY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br><br></li>
+        <li> <strong>Go Live With External Streaming App</strong><br><br>
+        	<h6><strong>OBS:</strong></h6>
+        	<ul>
+                  <li>1. Click Settings in the OBS Window and then Select Stream.</li>
+                  <li>2. Choose Custom Streaming Server in the Stream Type dropdown menu.</li>
+                  <li>3. In the URL box, type/paste your Server.</li>
+                  <li>4. In the Stream key, type/paste your Stream key.</li>
+                  <li>5. Save changes.Close the Settings window and click on the “Start Streaming” button in the main window of OBS.</li>
+            </ul>
+            
+            <h6><strong>StreamYard:</strong></h6>
+            <ul>
+                  <li>1. Set up your destination by going to your StreamYard account.</li>
+                  <li>2. Choose "Custom RTMP" and add the RTMP server URL and Stream key.</li>
+                  <li>3. Go to "Broadcasts" then "create a broadcast".</li>
+                  <li>4. Enter Live Studio.</li>
+                  <li>5. Adjust all your preferred settings and Click on "Go Live".</li>
+            </ul>
+            
+            <h6><strong>Restream:</strong></h6>
+            <ul>
+                  <li>1. Go to your Restream account and set up a destination or channel.</li>
+                  <li>2. Choose "Custom RTMP" and add the RTMP URL and Stream Key.</li>
+                  <li>3. Click on "Add Channel".</li>
+                  <li>4. Enter Live Studio.</li>
+                  <li>5. Adjust your preferred settings and Go Live.</li>
+            </ul>
+            
+            <h6><strong>vMix:</strong></h6>
+            <ul>
+                <li>1. Click on the gear icon near the stream button on the bottom.</li>
+                <li>2. Choose a custom RTMP Server in destination.</li>
+                <li>3. In the URL box, type/paste your URL.</li>
+                <li>4. In the Stream key, type/paste your Stream key.</li>
+                <li>5. Save changes. You can start streaming by clicking on the stream button at the bottom of the dashboard.</li>
+            </ul>
+            
+            <h6><strong>Wirecast:</strong></h6>
+            <ul>
+                <li>1. Click Output on the top of the screen and then Select Output Settings.</li>
+                <li>2. In the destination, choose RTMP Server and click OK.</li>
+                <li>3. In the Address box, type/paste your Address.</li>
+                <li>4. In the Stream box, type/paste your Stream key.</li>
+                <li>5. Click on OK to save changes just click the Output on the top of the screen and then Start/Stop Broadcasting.</li>
+            </ul>
+            
+            <h6><strong>XSplit:</strong></h6>
+            <ul>
+                <li>1. Click Broadcast in the XSplit Window and then click "Set up a new output".</li>
+                <li>2. Choose Custom RTMP in the Set up a new output dropdown menu.</li>
+                <li>3. In the URL box, type/paste your RTMP Url.</li>
+                <li>4. In the Stream key, type/paste your Stream key.</li>
+                <li>5. Save changes and click on the “Stream” button in the main window.</li>
+            </ul>            
+        </li>
+    </ol>
+  </section>  
+  
+  <section id="video_advertising">
+    <div class="page-header">
+      <h3>Video Advertising</h3>
+      <hr class="notop">
+    </div>
+    <p> You can create many different ads</p>
+
+    <p> <strong>Go here to create your ad, it's pretty easy:</strong><br>
+      <img src="assets/images/doc-140.png" width="1600" height="800"></p>
+    <p> <strong>Supported ad types include: Image, Video, VAST 4.2 (Linear & Non-Linear), Google Adsense & your custom HTML code.</strong><br>
+      <img src="assets/images/doc-141.png" width="1600" height="1120">
+      <img src="assets/images/doc-142.png" width="1600" height="1166">
+      <img src="assets/images/doc-143.png" width="1600" height="1168">
+      <img src="assets/images/doc-144.png" width="1600" height="1280">
+    </p>
+    <p> <strong>You can choose any ad for all the videos here:</strong><br>
+      <img src="assets/images/doc-145.png" width="1600" height="800"></p>
+    <p> <strong>You can choose any ad for all video posts in a specific category or tag:</strong><br>
+      <img src="assets/images/doc-146.png" width="1600" height="1068"></p>
+    <p> <strong>You can choose any ad for any single post or in each playlist/series:</strong><br>
+      <img src="assets/images/doc-147.png" width="1600" height="1088"></p>    
+  </section>
+  
+  <section id="bunnystream">
+    <div class="page-header">
+      <h3>Bunny Stream (Video file support)</h3>
+      <hr class="notop">
+    </div>
+    <p>
+    	By default, the maximum upload file size for PHP scripts is set to 128 megabytes. However, you may want to change these limits. For example, you can set a lower limit to prevent users from uploading large files to your site. To do this, change the <strong>upload_max_filesize</strong> and <strong>post_max_size</strong> directives. To ensure that file uploads work correctly, the post_max_size directive should be a little larger than the <strong>upload_max_filesize</strong>. For example, the following settings demonstrate how to set a file upload limit to 1024 megabytes:<br><br>
+
+        <strong>max_execution_time</strong> = 6000 or 12000<br>
+        <strong>max_input_time</strong> = 6000 or 12000<br>
+        <strong>max_input_vars</strong> = 6000 or 12000<br>
+        <strong>memory_limit</strong> = 512M or 1024M<br>
+        <strong>post_max_size</strong> = 2048M<br>
+        <strong>upload_max_filesize</strong> = 1024M
+	</p>
+    <p>
+    	<em>If you still have questions or need further assistance and suggestions, please contact us through the support tab.</em>
+    </p>
+    
+    <ol>
+    	<li> Go to: <a href="https://panel.bunny.net/user/login" target="_blank">https://panel.bunny.net/user/login</a> </li>
+      	<li> Sign in with your Bunny account. </li>
+        <li> <strong>Go to the "Stream" menu and click "ADD VIDEO LIBRARY":</strong><br>
+            <img src="assets/images/doc-135.png" width="1350" height="666"> <br>
+            <br>
+        </li>
+        <li> <strong>Enter the name of your library and choose a "Storage" location. Finally, click on "ADD VIDEO LIBRARY" to create a library:</strong><br>
+            <img src="assets/images/doc-136.png" width="1350" height="1166"> <br>
+            <br>
+        </li>
+        <li> <strong>Once created, continue to access the "Stream" menu and choose the library you just created:</strong><br>
+            <img src="assets/images/doc-137.png" width="1350" height="666"> <br>
+            <br>
+        </li>
+        <li> <strong>Click on the API menu to see your declaration information, copy them and declare for your website:</strong><br>
+            <img src="assets/images/doc-138.png" width="1350" height="966"> <br>
+            <br>
+        </li>
+        <li> <strong>Declare the above keys here and save:</strong><br>
+            <img src="assets/images/doc-139.png" width="1333" height="666"> <br>
+            <br>
+        </li>
+        <li> <strong>If you want to automatically fetch thumbnails for videos from BunnyStream, declare Webhook by copying this link:</strong><br>
+            <img src="assets/images/doc-168.png" width="1600" height="924"> <br>
+            <br>
+        </li>
+        <li> <strong>Then go to your BunnyCDN, go to the Stream menu, select your Zone and paste it like this, finally save:</strong><br>
+            <img src="assets/images/doc-167.png" width="1600" height="950"> <br>
+            <br>
+        </li>
+        
+        <li> <strong>Continue going to the "Pull Zone" section and click "Manager" to find and declare the AccessKey for the download feature:</strong><br>
+            <img src="assets/images/doc-175.png" width="1600" height="949"> <br>
+            <br>
+        </li>
+        
+        <li> <strong>Go to the "Origin URL" section and click "Storage Zone" to find and declare the AccessKey for the download feature:</strong><br>
+            <img src="assets/images/doc-176.png" width="1600" height="838"> <br>
+            <br>
+        </li>
+        
+        <li> <strong>Follow the instructions below to get the Accesskey to use for the next step:</strong><br>
+            <img src="assets/images/doc-177.png" width="1600" height="838"> <br>
+            <br>
+        </li>
+        
+        <li> <strong>Paste the code you just copied into this field:</strong><br>
+            <img src="assets/images/doc-178.png" width="1600" height="1099"> <br>
+            <br>
+        </li>
+    </ol>
+  </section>
+  
+  <section id="bunnystorage">
+    <div class="page-header">
+      <h3>Bunny Storage (Audio file support)</h3>
+      <hr class="notop">
+    </div>
+    <p>
+    	By default, the maximum upload file size for PHP scripts is set to 128 megabytes. However, you may want to change these limits. For example, you can set a lower limit to prevent users from uploading large files to your site. To do this, change the <strong>upload_max_filesize</strong> and <strong>post_max_size</strong> directives. To ensure that file uploads work correctly, the post_max_size directive should be a little larger than the <strong>upload_max_filesize</strong>. For example, the following settings demonstrate how to set a file upload limit to 1024 megabytes:<br><br>
+
+        <strong>max_execution_time</strong> = 6000 or 12000<br>
+        <strong>max_input_time</strong> = 6000 or 12000<br>
+        <strong>max_input_vars</strong> = 6000 or 12000<br>
+        <strong>memory_limit</strong> = 512M or 1024M<br>
+        <strong>post_max_size</strong> = 2048M<br>
+        <strong>upload_max_filesize</strong> = 1024M
+	</p>
+    <p>
+    	<em>If you still have questions or need further assistance and suggestions, please contact us through the support tab.</em>
+    </p>
+    
+    <ol>
+    	<li> Go to: <a href="https://panel.bunny.net/user/login" target="_blank">https://panel.bunny.net/user/login</a> </li>
+      	<li> Sign in with your Bunny account. </li>
+        <li> <strong>Go to the "Storage" menu and click "+ Add Storage Zone":</strong><br>
+            <img src="assets/images/doc-154.png" width="1600" height="678"> <br>
+            <br>
+        </li>
+        <li> <strong>Enter the name of your Storage Zone, eg: we name it "beeteam368-storage-files" ( you can give another name...this is just an example ). Then set up options like Storage Tier, Main Storage Region and Geo Replication (depending on your geography and budget). Finally, click on "ADD STORAGE ZONE" to create a new zone:</strong><br>
+            <img src="assets/images/doc-155.png" width="1602" height="1992"> <br>
+            <br>
+        </li>
+        <li> <strong>Once created, you will be redirected to "FTP & API ACCESS", copy the values of the highlighted fields including: 2, 3, 4 & 5:</strong><br>
+            <img src="assets/images/doc-156.png" width="1600" height="964"> <br>
+            <br>
+        </li>
+        <li> <strong>Enter the zone name you created in step 2 here:</strong><br>
+            <img src="assets/images/doc-166.png" width="1600" height="868"> <br>
+            <br>
+        </li>
+        <li> <strong>Declare the above information in the corresponding data fields and save:</strong><br>
+            <img src="assets/images/doc-161.png" width="1560" height="895"> <br>
+            <br>
+        </li>
+        <li> <strong>Still under "FTP & API ACCESS", please continue by clicking the button "CONNECT PULL ZONE":</strong><br>
+            <img src="assets/images/doc-157.png" width="1600" height="806"> <br>
+            <br>
+        </li>
+        <li> <strong>Enter the name of your Pull Zone, eg: we name it "beeteam368-pull-zones-urls" ( you can give another name...this is just an example ). Then select "Original Type" = "Storage Zone" and select the zone you created in the previous steps. Finally, click on "ADD PULL ZONE" to create a new pull zone:</strong><br>
+            <img src="assets/images/doc-158.png" width="1600" height="806"> <br>
+            <br>
+        </li>
+        <li> <strong>Once created, please continue by clicking "SKIP INSTRUCTIONS" button:</strong><br>
+            <img src="assets/images/doc-159.png" width="1600" height="898"> <br>
+            <br>
+        </li>
+        <li> <strong>Copy your pull zone link:</strong><br>
+            <img src="assets/images/doc-160.png" width="1600" height="835"> <br>
+            <br>
+        </li>
+        <li> <strong>Declare that link as instructed below and save:</strong><br>
+            <img src="assets/images/doc-162.png" width="1560" height="906"> <br>
+            <br>
+        </li>
+        <li> <strong>Go to Header -> and add audio extensions: mp3, oga, ogg, wav</strong><br>
+            <img src="assets/images/doc-163.png" width="1600" height="708"> <br>
+            <br>
+        </li>
+    </ol>
+  </section>
+  
+  <section id="google_api_key">
+    <div class="page-header">
+      <h3>Youtube API Key</h3>
+      <hr class="notop">
+    </div>
+    <ol>
+      <li> Go to: <a href="https://console.developers.google.com/" target="_blank">https://console.developers.google.com/</a> </li>
+      <li> Sign in with your Google account. </li>
+      <li> <strong>Select a project, or if you don't have any in your account, click "Select a project":</strong><br>
+        <img src="assets/images/doc-114.png" width="1350" height="900"> <br>
+        <br>
+      </li>
+      <li> <strong>Create a new project:</strong><br>
+        <img src="assets/images/doc-115.png" width="1350" height="989"> <br>
+        <br>
+      </li>
+      <li> <strong>Enter Project Name & click to Create button:</strong><br>
+        <img src="assets/images/doc-116.png" width="1350" height="535"> <br>
+        <br>
+      </li>
+      <li> <strong>After successful creation, a message will appear, select the project you just created:</strong><br>
+        <img src="assets/images/doc-117.png" width="1350" height="900"> <br>
+        <br>
+      </li>
+      <li> <strong>Find "Explore and enable APIs" and click on it:</strong><br>
+        <img src="assets/images/doc-118.png" width="1350" height="989"> <br>
+        <br>
+      </li>
+      <li> <strong>Click to "ENABLE APIS AND SERVICES":</strong><br>
+        <img src="assets/images/doc-119.png" width="1350" height="989"> <br>
+        <br>
+      </li>
+      <li> <strong>Scroll down, find the item "Youtube Data API V3" & click on it:</strong><br>
+        <img src="assets/images/doc-120.png" width="1350" height="969"> <br>
+        <br>
+      </li>
+      <li> <strong>Next, click to "Enable":</strong><br>
+        <img src="assets/images/doc-121.png" width="1350" height="989"> <br>
+        <br>
+      </li>
+      <li> <strong>After successful activation, please click to "Credentials" -> click to "CREATE CREDENTIALS":</strong><br>
+        <img src="assets/images/doc-122.png" width="1350" height="686"> <br>
+        <br>
+      </li>
+      <li> <strong>Click to: "API KEY"</strong><br>
+        <img src="assets/images/doc-123.png" width="1350" height="663"> <br>
+        <br>
+      </li>
+      <li> <strong>A window will open, your API key has been generated, copy it to use for the next step below:</strong><br>
+        <img src="assets/images/doc-124.png" width="1350" height="986"> <br>
+        <br>
+      </li>
+      <li> <strong>Go to your WordPress Dashboard -> Theme Settings -> API & Fetch Data (PRO) -> paste that code in the "[Youtube] Google "Private" API key" field | Then save:</strong><br>
+        <img src="assets/images/doc-125.png" width="1350" height="666"> <br>
+        <br>
+      </li>
+    </ol>
+  </section>
+  <section id="vimeo_api_key">
+    <div class="page-header">
+      <h3>Vimeo API Key</h3>
+      <hr class="notop">
+    </div>
+    <ol>
+      <li> Go to: <a href="https://vimeo.com/" target="_blank">https://vimeo.com/</a> </li>
+      <li> Sign in with your Vimeo account. </li>
+      <li> Go to: <a href="https://developer.vimeo.com/apps" target="_blank">https://developer.vimeo.com/apps</a> </li>
+      <li> <strong>Create an app:</strong><br>
+        <img src="assets/images/doc-126.png" width="1350" height="666"> <br>
+        <br>
+      </li>
+      <li> <strong>Enter the required information:</strong><br>
+        <img src="assets/images/doc-127.png" width="1350" height="665"> <br>
+        <br>
+      </li>
+      <li> <strong>Click to "Generate Access Token" and follow the instructions below:</strong><br>
+        <img src="assets/images/doc-128.png" width="1350" height="474"> <br>
+        <br>
+      </li>
+      <li> <strong>Copy the codes below to use for the next step:</strong><br>
+        <img src="assets/images/doc-129.png" width="1350" height="1963"> <br>
+        <br>
+      </li>
+      <li> <strong>Go to your WordPress Dashboard -> Theme Settings -> API & Fetch Data (PRO) -> Paste the corresponding code for each field | Then save:</strong><br>
+        <img src="assets/images/doc-130.png" width="1350" height="921"> <br>
+        <br>
+      </li>
+    </ol>
+  </section>
+  <section id="auto_fetch_data">
+    <div class="page-header">
+      <h3>Auto Fetch Data</h3>
+      <hr class="notop">
+    </div>
+    <p><strong>Support fetching title, description, thumbnail, duration, views count, tags from Youtube, Vimeo and Dailymotion videos</strong></p>
+    <p><strong>Please note, with Youtube, you need to declare the APIs key first: <a href="#google_api_key">Youtube API Key</a></strong></p>
+    <p><strong>Please note, With Vimeo, you don't need to make APIs key declarations, unless you want to fetch data from private videos from your account: <a href="#vimeo_api_key">Vimeo API Key</a></strong></p>
+    <p><strong>It will be divided into 3 main settings:</strong></p>
+    <ol>
+      <li><strong>Applies to all video posts added from WordPress Dashboard: -> Theme Settings -> API & Fetch Data (PRO) -> Scroll to:</strong><br>
+        <img src="assets/images/doc-131.png" width="1350" height="1400"> <br>
+        <br>
+      </li>
+      <li><strong>Apply for each specific video post:</strong><br>
+        <img src="assets/images/doc-132.png" width="1350" height="11"><br>
+        <br>
+      </li>
+      <li><strong>Apply to front-end video post submission form: WordPress Dashboard -> Theme Settings -> User Submit Settings -> scroll to:</strong><br>
+        <img src="assets/images/doc-133.png" width="1350" height="1133"><br>
+        <br>
+      </li>
+    </ol>
+  </section>
+  <section id="audio">
+    <div class="page-header">
+      <h3>Audio</h3>
+      <hr class="notop">
+    </div>
+    <p> The theme feature already supports format recognition based on file extension. Therefore, you just need to set up with the default options without having to change them.&nbsp;</p>
+    <p> <em>If you still have questions or need further assistance and suggestions, contact us through the support tab.</em></p>
+    <p> <strong>Self-Hosted Audio:</strong><br>
+      <img src="assets/images/doc-61.png" width="1600" height="988"></p>
+    <p> <strong>Embed - Spotify:</strong><br>
+      <img src="assets/images/doc-62.png" width="1600" height="700"></p>
+    <p> <strong>Embed - Spotify Playlist:</strong><br>
+      <img src="assets/images/doc-63.png" width="1600" height="700"></p>
+    <p> <strong>Embed - SoundCloud:</strong><br>
+      <img src="assets/images/doc-64.png" width="1600" height="700"></p>
+  </section>
+  <section id="playlist">
+    <div class="page-header">
+      <h3>Playlist</h3>
+      <hr class="notop">
+    </div>
+    <p> <strong>Step 1:&nbsp;</strong>Create playlist first<br>
+      <img src="assets/images/doc-65.png" width="1600" height="868"></p>
+    <p> <strong>Step 2:&nbsp;</strong>Go back to the video post (or audio post) and select the playlist for that video post (or audio post)<br>
+      <img src="assets/images/doc-66.png" width="1600" height="666"></p>
+  </section>
+  <section id="series">
+    <div class="page-header">
+      <h3>Series</h3>
+      <hr class="notop">
+    </div>
+    <p> <strong>Step 1:&nbsp;</strong>Create series first<br>
+      <img src="assets/images/doc-67.png" width="1600" height="686"></p>
+    <p> <strong>Step 2:&nbsp;</strong>Create groups, and put corresponding videos (or audios) in series,&nbsp;see the example below:<br>
+      <img src="assets/images/doc-68.png" width="1600" height="3309"></p>
+  </section>
+  <section id="trending">
+    <div class="page-header">
+      <h3>Trending</h3>
+      <hr class="notop">
+    </div>
+    <p> Step 1:&nbsp;Create a new page, in this case we name it &quot;<strong>Trending</strong>&quot;:<br>
+      <img src="assets/images/doc-69.png" width="1350" height="770"></p>
+    <p> Step 2: Go to <strong>WordPress Dashboard -&gt; Theme Settings -&gt; Trending Settings Tab -&gt; Scroll to: Trending Page -&gt;&nbsp;Use the magnifying glass icon next to the input box to find and select the &quot;Trending&quot; page</strong> (The page you created in step 1):<br>
+      <img src="assets/images/doc-70.png" width="1350" height="1320"></p>
+  </section>
+  <section id="channel">
+    <div class="page-header">
+      <h3>Channel</h3>
+      <hr class="notop">
+    </div>
+    <p> <strong>Step 1:</strong>&nbsp;Create two new pages, in this case we name them: &quot;<strong>Channel</strong>&quot; and &quot;<strong>Member List</strong>&quot;.</p>
+    <p> <strong>Step 2:</strong> Go to&nbsp;<strong>WordPress Dashboard -&gt; Theme Settings -&gt; Channel Settings -&gt; General Settings Tab -&gt; Scroll to: Channel Page -&gt;&nbsp;Use the magnifying glass icon next to the input box to find and select the &quot;Channel&quot; page</strong>&nbsp;(The page you created in step 1):<br>
+      <img src="assets/images/doc-71.png" width="1680" height="638"></p>
+    <p> <strong>Step 3:</strong>&nbsp;Go to&nbsp;<strong>WordPress Dashboard -&gt; Theme Settings -&gt; Channel Settings -&gt; General Settings Tab -&gt; Scroll to: Member Page -&gt;&nbsp;Use the magnifying glass icon next to the input box to find and select the &quot;Member List&quot; page</strong>&nbsp;(The page you created in step 1):<br>
+      <img src="assets/images/doc-72.png" width="1680" height="638"></p>
+  </section>
+  <section id="video_quizzes">
+    <div class="page-header">
+      <h3>Video Quizzes</h3>
+      <hr class="notop">
+    </div>
+    <p> <strong>Step 1: </strong>&nbsp; Create a new video post: <a href="#video" title="Video"><strong>See the guide here</strong></a> </p>
+    <p> <strong>Step 2: Link to the video you just created and set up questions related to the video's content:<br>
+      <img src="assets/images/doc-179.png" width="1546" height="4613"></p>
+    
+  </section>
+  <section id="mycred">
+    <div class="page-header">
+      <h3>MyCred</h3>
+      <hr class="notop">
+    </div>
+    <p> Here are the settings we recommend for you, you can change a few things to suit your system.</p>
+    <p> <em>If you still have questions or need further assistance and suggestions, contact us through the support tab.</em></p>
+    <h5> <strong>A/ buyCred &amp; cashCred&nbsp;</strong></h5>
+    <p style="margin-left: 40px;"> <strong>Step 1: </strong>Go to&nbsp;<strong>WordPress Dashboard -&gt; Theme Settings -&gt; Functional Options -&gt; Scroll to:&nbsp;buyCred (PRO) &amp; Turn ON</strong></p>
+    <p style="margin-left: 40px;"> <strong>Step 2:</strong>&nbsp;Create a new page, in this case we name it &quot;Buy&quot;:</p>
+    <p style="margin-left: 40px;"> <strong>Step 3:&nbsp;</strong>Go to&nbsp;<strong>WordPress Dashboard -&gt; Theme Settings -&gt; Functional Options -&gt; Scroll to:&nbsp;buyCred Page (PRO)&nbsp;-&gt;&nbsp;Use the magnifying glass icon next to the input box to find and select the &quot;Buy&quot; page</strong>&nbsp;(The page you created in step 1):<br>
+      <img src="assets/images/doc-73.png" width="1350" height="660"></p>
+    <p style="margin-left: 40px;"> <strong>Step 4:&nbsp;</strong>Go to&nbsp;<strong>WordPress Dashboard -&gt; myCred -&gt; General Settings -&gt; Scroll to &quot;buyCred&quot; item &amp;&nbsp;</strong><strong>Click to expand&nbsp;</strong><strong>-&gt; Scroll to:&nbsp;Redirect.&nbsp;You choose &quot;Buy&quot; page for two options Redirect to Page&nbsp;</strong>(The page you created in step 1) &amp; <strong>Setup like the image below:</strong><br>
+      <img src="assets/images/doc-74.png" width="1350" height="1003"></p>
+    <p style="margin-left: 40px;"> <strong>Step 5:&nbsp;</strong>Go to&nbsp;<strong>WordPress Dashboard -&gt; myCred -&gt; buyCred Gateways -&gt;&nbsp;</strong>Set up payment information (when users buy points, money will be transferred to your account through these declarations) -&nbsp;You can use other payment gateways, please refer to: <a href="https://mycred.me/product-category/buycred-gateways/">https://mycred.me/product-category/buycred-gateways/<br>
+      <img src="assets/images/doc-75.png" width="1350" height="1000"></a></p>
+    <p style="margin-left: 40px;"> <strong>Step 6:&nbsp;</strong>Go to&nbsp;<strong>WordPress Dashboard -&gt; myCred -&gt; cashCred Gateways </strong><em>(cashCred allows your users to convert their Points into Cash and the possibility to withdraw their points through different payment gateways)</em><strong> -&gt;&nbsp;</strong>You can use other payment gateways, please refer to:&nbsp;<a href="https://mycred.me/product-category/cashcred-gateways/">https://mycred.me/product-category/cashcred-gateways/</a>&nbsp;-&nbsp;In this case, we set up the payment method via bank transfer:<br>
+      <img src="assets/images/doc-76.png" width="1350" height="898"></p>
+    <h5> <strong>B/ Sell Content ( &amp; Sell Media )</strong></h5>
+    <p style="margin-left: 40px;"> <strong>Step 1:&nbsp;</strong>Go to&nbsp;<strong>WordPress Dashboard -&gt; Theme Settings -&gt; Functional Options -&gt; Scroll to:&nbsp;myCred Sell Content (PRO) &amp; Turn ON</strong></p>
+    <p style="margin-left: 40px;"> <strong>Step 2:&nbsp;</strong>Go to&nbsp;<strong>WordPress Dashboard -&gt; myCred -&gt; General Settings -&gt; Scroll to &quot;Sell Content&quot; item &amp;&nbsp;</strong><strong>Click to expand&nbsp;</strong><strong>-&gt; Scroll to: Post Type -&gt; Choose&nbsp;Posts, Videos and Audios -&gt;&nbsp;</strong>Then <strong>Save</strong> (Scroll to the bottom find the "Update Setttings" button and save it)</p>
+    <p style="margin-left: 40px;"> <strong><img src="assets/images/doc-77.png" width="1350" height="1199"></strong></p>
+    <p style="margin-left: 40px;"> <strong>Step 3:&nbsp;</strong>After completing step 1, continue to click Sell Content again to expand -&gt;&nbsp;Select &quot;<strong>Posts I manually select</strong>&quot; for all Posts, Videos and Audios:<br>
+      <img src="assets/images/doc-78.png" width="1350" height="888"></p>
+    <p style="margin-left: 40px;"> Scroll to &quot;<strong>Button Label</strong>&quot;,&nbsp;then enter the code below:</p>
+    <pre style="margin-left: 40px;">
+&lt;i class=&quot;fas fa-dollar-sign icon&quot;&gt;&lt;/i&gt;&lt;span&gt;Pay %price% Points&lt;/span&gt;</pre>
+    <p style="margin-left: 40px;"> Scroll to &quot;<strong>Transactions</strong>&quot; and check &quot;<strong>Reload page after successful payments</strong>&quot;</p>
+    <p style="margin-left: 40px;"> Scroll to: &quot;<strong>Purchase Template</strong>&quot;,&nbsp;then enter the code below:</p>
+    <div style="margin-left: 40px;"> <em><strong>&lt;div class=&quot;text-center&quot;&gt;</strong></em></div>
+    <div style="margin-left: 40px;"> <em><strong>&lt;h2 class=&quot;h1 h4-mobile&quot;&gt;Premium Content&lt;/h2&gt;</strong></em></div>
+    <div style="margin-left: 40px;"> <em><strong>&lt;div class=&quot;sell-descriptions&quot;&gt;Buy access to this content&lt;/div&gt;</strong></em></div>
+    <div style="margin-left: 40px;"> <em><strong>%buy_button% %watch_trailer%</strong></em></div>
+    <div style="margin-left: 40px;"> <em><strong>&lt;/div&gt;</strong></em></div>
+    <p style="margin-left: 40px;"> Scroll to: &quot;<strong>Insufficient Funds Template</strong>&quot;,&nbsp;then enter the code below:</p>
+    <div style="margin-left: 40px;">
+      <div> <em><strong>&lt;div class=&quot;text-center&quot;&gt;</strong></em></div>
+      <div> <em><strong>&lt;h2 class=&quot;h1 h4-mobile&quot;&gt;Premium Content&lt;/h2&gt;</strong></em></div>
+      <div> <em><strong>&lt;div class=&quot;sell-descriptions&quot;&gt;Insufficient Funds&lt;/div&gt;</strong></em></div>
+      <div> <em><strong>%buy_points% %watch_trailer%</strong></em></div>
+      <div> <em><strong>&lt;/div&gt;</strong></em></div>
+    </div>
+    <p style="margin-left: 40px;"> Scroll to: &quot;<strong>Visitors Template</strong>&quot;,&nbsp;then enter the code below:</p>
+    <div style="margin-left: 40px;"> <em><strong>&lt;div class=&quot;text-center&quot;&gt;</strong></em></div>
+    <div style="margin-left: 40px;"> <em><strong>&lt;h2 class=&quot;h1 h4-mobile&quot;&gt;Premium Content&lt;/h2&gt;</strong></em></div>
+    <div style="margin-left: 40px;"> <em><strong>&lt;div class=&quot;sell-descriptions&quot;&gt;Login to buy access to this content.&lt;/div&gt;</strong></em></div>
+    <div style="margin-left: 40px;"> <em><strong>%login_form% %watch_trailer%</strong></em></div>
+    <div style="margin-left: 40px;"> <em><strong>&lt;/div&gt;</strong></em></div>
+    <p style="margin-left: 40px;"> <img src="assets/images/doc-79.png" width="1350" height="1849"></p>
+    <p style="margin-left: 40px;"> And finally save it again!!!</p>
+    <p style="margin-left: 40px;"> <strong>Step 4:&nbsp;</strong>Here&#39;s the setup guide for the post, once you&#39;ve completed steps 1 and 2:<br>
+      <img src="assets/images/doc-80.png" width="1350" height="850"></p>
+    <h5> <strong>C/ Transfer (&nbsp;Use for Virtual Gift feature</strong>&nbsp;<strong>)</strong></h5>
+    <p style="margin-left: 40px;"> <strong>Step 1:&nbsp;</strong>Go to&nbsp;<strong>WordPress Dashboard -&gt; Theme Settings -&gt; Functional Options -&gt; Scroll to:&nbsp;Virtual Gifts (PRO)&nbsp;&amp; Turn ON</strong></p>
+    <p style="margin-left: 40px;"> <strong>Step 2:&nbsp;</strong>Go to&nbsp;<strong>WordPress Dashboard -&gt; myCred -&gt; General Settings -&gt; Scroll to &quot;Transfer&quot; item &amp; click to expand -&gt;&nbsp;</strong>Refer to the setting below:<br>
+      <img src="assets/images/doc-81.png" width="1350" height="1190"></p>
+  </section>
+  <section id="membership">
+    <div class="page-header">
+      <h3>[ARMember] Membership</h3>
+      <hr class="notop">
+    </div>
+    <ol>
+      <li> Install <strong>"ARMember – Membership Plugin, Content Restriction, Member Levels, User Profile & User signup"</strong> plugin ( <a href="https://wordpress.org/plugins/armember-membership/armember-membership.zip" target="_blank">https://wordpress.org/plugins/armember-membership/armember-membership.zip</a> )</li>
+      <li> After successful installation and activation, please go to&nbsp;<strong>ARMember Lite -&gt; Manage Plans</strong> and create more plans for your website (These are the membership levels: <a href="https://www.armemberplugin.com/documents/add-freepaid-membership-plans/" target="_blank">https://www.armemberplugin.com/documents/add-freepaid-membership-plans/</a>):<br>
+        <img src="assets/images/doc-93.png" width="1350" height="930"><br>
+        &nbsp;</li>
+      <li> After creating specific plans (membership level), please visit <strong>ARMember Lite -&gt; General Settings &gt; Payment Gateways</strong> and set up your payment information:<br>
+        <img src="assets/images/doc-94.png" width="1350" height="930"><br>
+        &nbsp;</li>
+      <li> After completing step 2 and step 3, please visit <strong>ARMember Lite -&gt; Add New Plan + Signup Page</strong>, this wizard will help you to configure membership registration page. It will generate only single shortcode for processes like plan selection -&gt; signup -&gt; payment process.<br>
+        <img src="assets/images/doc-95.png" width="1350" height="930"><br>
+        &nbsp;</li>
+      <li> Then save it and you will see a corresponding shortcode generated for that form, please copy it to use for the next step:<br>
+        <img src="assets/images/doc-96.png" width="1350" height="930"><br>
+        &nbsp;</li>
+      <li> Create a new page, in this case we name it <strong>"Membership Plans"</strong>, then follow this guide to put the shortcode you created in step 5:<br>
+        <img src="assets/images/doc-97.png" width="1350" height="888">
+        <p>There will be a pop-up window, choose <strong>"Membership Setup Wizard"</strong> and set it up according to the instructions below:</p>
+        <img src="assets/images/doc-98.png" width="1350" height="999">
+        <p>Once setup is complete, save this page.</p>
+      </li>
+      <li> Go to WordPress Dashboard -> Theme Settings -> Functional Options -> Scroll to: <strong>Membership Plans Page (PRO)</strong> -> Use the magnifying glass icon next to the input box to find and select the <strong>"Membership Plans"</strong> page (The page you created in step 6):<br>
+        <img src="assets/images/doc-99.png" width="1350" height="688"><br>
+        &nbsp;</li>
+      <li> Create a new page, in this case we name it <strong>"Membership Transactions"</strong>, then follow the instructions below to include the necessary shortcodes on this page:<br>
+        <img src="assets/images/doc-100.png" width="1350" height="888">
+        <p>A/ <strong>"Current Membership"</strong> Shortcode</p>
+        <img src="assets/images/doc-101.png" width="1350" height="1288">
+        <p>B/ <strong>"Payment Transactions"</strong> Shortcode</p>
+        <img src="assets/images/doc-102.png" width="1350" height="920">
+        <p>C/ <strong>"Close Account"</strong> Shortcode</p>
+        <img src="assets/images/doc-103.png" width="1350" height="896"> </li>
+      <li> Once setup is complete, save this page:<br>
+        <img src="assets/images/doc-104.png" width="1350" height="930"><br>
+        &nbsp;</li>
+      <li> Go to WordPress Dashboard -> Theme Settings -> Functional Options -> Scroll to: <strong>Membership Transactions Page (PRO)</strong> -> Use the magnifying glass icon next to the input box to find and select the <strong>"Membership Transactions"</strong> page (The page you created in step 9):<br>
+        <img src="assets/images/doc-105.png" width="1350" height="699"><br>
+        &nbsp;</li>
+      <li>Interface for forms and membership levels. VidMov only supports standard styles for ArMember, so you need to set it up like this to make sure it renders best:<br>
+        <p>A/ Go to "<strong>Manager Form</strong>" and click edit for "<strong>Registration / Signup Forms</strong>" item:</p>
+        <img src="assets/images/doc-110.png" width="1350" height="1100"><br>
+        Then choose the standard style here:<br>
+        <img src="assets/images/doc-111.png" width="1350" height="1000"><br>
+        <p>B/ Go to "<strong>Manager Form</strong>" and click edit for "<strong>Other Forms (Login / Forgot Password / Change Password)</strong>" item:</p>
+        <img src="assets/images/doc-112.png" width="1350" height="1100"><br>
+        Then choose the standard style here:<br>
+        <img src="assets/images/doc-113.png" width="1350" height="1000"><br>
+        &nbsp;</li>
+      <li> After completing all 11 steps above, you can set up membership for each video & audio category, tag, or in priority mode for each specific video or audio post.<br>
+        <p><strong>A/ Video Category:</strong></p>
+        <img src="assets/images/doc-106.png" width="1350" height="1299">
+        <p><strong>B/ Audio Category:</strong></p>
+        <img src="assets/images/doc-107.png" width="1350" height="1299">
+        <p><strong>C/ Tag:</strong></p>
+        <img src="assets/images/doc-108.png" width="1350" height="1299">
+        <p><strong>D/ Video & Audio Post:</strong></p>
+        <img src="assets/images/doc-109.png" width="1350" height="1100"> &nbsp;</li>
+    </ol>
+  </section>
+
+  <section id="paid_membership_pro">
+    <div class="page-header">
+      <h3>Paid Membership Pro</h3>
+      <hr class="notop">
+    </div>
+    <ol>
+      <li> Install <strong>"Paid Membership Pro Plugin, Content Restriction, Member Levels, User Profile & User signup"</strong> plugin ( <a href="https://www.paidmembershipspro.com/membership-checkout/?pmpro_level=7" target="_blank">https://www.paidmembershipspro.com/membership-checkout/?pmpro_level=7</a> )</li>
+      <li> Check out some more instructions here:<br>
+        A/ <a href="https://www.youtube.com/watch?v=d-a-E9U2XbY" target="_blank">VidMov Theme - Install Membership Pro Plugin</a><br>
+        B/ <a href="https://www.youtube.com/watch?v=weTF5xOrXLU" target="_blank">VidMov Theme - Setup for Paid Membership Pro</a><br>
+        C/ <a href="https://www.youtube.com/watch?v=OhtGdEsX_rs" target="_blank">VidMov Theme - Import Custom Levels</a><br><br>
+      </li>
+      
+      <li>Create plans/levels following these instructions: <a href="https://www.paidmembershipspro.com/documentation/membership-levels/initial-membership-level-setup/" target="_blank">https://www.paidmembershipspro.com/documentation/membership-levels/initial-membership-level-setup/</a></li>
+
+      <li>Applies to video/audio posts the same as with Armember's instructions:<br>
+        <img src="assets/images/doc-180.png" width="1350" height="1000"><br>
+
+      </li>
+    </ol>
+  </section>
+  
+  <section id="membership_video_ads">
+    <div class="page-header">
+      <h3>[Membership] with Video Ads</h3>
+      <hr class="notop">
+      
+      <p><strong>You can hide ads for customers who have joined (paid) on a particular plan. This feature is supported and combined with the ARMember plugin.</strong></p>
+      <img src="assets/images/doc-169.png" width="1368" height="1300"><br>
+      
+    </div>
+  </section>
+  
+  <section id="woo_prime">
+    <div class="page-header">
+      <h3>[Woocommerce] Prime Video/Audio</h3>
+      <hr class="notop">
+      <ol>
+      	<li> Create a product with parameters like below ( Set the name of the download file: <strong>--prime_video_368#</strong> | Then select any file in your media library for the download field to take effect, or it could also be a link to your homepage, for example <strong>https://your-domain.com</strong> ):<br>
+        <img src="assets/images/doc-148.png" width="1600" height="1288"><br>
+        &nbsp;</li>
+        <li>In the video (or audio) post editor area. Scroll down to find custom field "[WooCommerce Premium Video]", type the name of the newly created product to search and select it:<br>
+        <img src="assets/images/doc-151.png" width="1600" height="1265"><br></li>
+      </ol>
+    </div>
+  </section>
+  
+  <section id="woo_download">
+    <div class="page-header">
+      <h3>[Woocommerce] Premium Download</h3>
+      <hr class="notop">
+      <ol>
+      	<li> Create a product with parameters like below:<br>
+        <img src="assets/images/doc-149.png" width="1600" height="1339"><br>
+        &nbsp;</li>
+        <li>In the video (or audio) post editor area. Scroll down to find custom field "[WooCommerce Premium Download]", type the name of the newly created product to search and select it:<br>
+        <img src="assets/images/doc-152.png" width="1600" height="1288"><br>
+        &nbsp;</li>
+      </ol>
+    </div>
+  </section> 
+  
+  <section id="woo_prime_download">
+    <div class="page-header">
+      <h3>[Woocommerce] Combine both (Prime & Premium Download)</h3>
+      <hr class="notop">
+      <ol>
+      	<li> Create a product with parameters like below:<br>
+        <img src="assets/images/doc-150.png" width="1600" height="1288"><br>
+        &nbsp;</li>
+        <li>In the video (or audio) post editor area. Scroll down to find custom fields "[WooCommerce Premium Download]" & "[WooCommerce Premium Download]", type the name of the newly created product to search and select it:<br>
+        <img src="assets/images/doc-153.png" width="1600" height="1288"><br>
+        &nbsp;</li>
+      </ol>
+    </div>
+  </section>  
+  
+  <section id="woo_mycred">
+    <div class="page-header">
+      <h3>[Woocommerce] with myCred</h3>
+      <hr class="notop">
+      <ol>
+      	<li> Create a new product and set the number of points received after purchase:<br>
+        <img src="assets/images/doc-164.png" width="1350" height="1220"><br>
+        &nbsp;</li>
+        <li>Then go to Theme Settings -> buyCred Setting and select the newly created products so that users can see and buy points.:<br>
+        <img src="assets/images/doc-165.png" width="1350" height="660"><br>
+        &nbsp;</li>
+      </ol>
+    </div>
+  </section>  
+  
+  <section id="elementor">
+    <div class="page-header">
+      <h3>Elementor</h3>
+      <hr class="notop">
+    </div>
+    <div>In Elementor's window you can scroll to the bottom and you will see widgets created by BeeTeam368:<br>
+      <img src="assets/images/doc-82.png" width="1350" height="1100"><br>
+      &nbsp;</div>
+    <p> You can use these elements to build pages.&nbsp;Here are the settings of those elements.</p>
+    <p> <strong>Posts Block</strong> (There are 7 layouts):</p>
+    <ol>
+      <li> Layouts:<br>
+        <img src="assets/images/doc-83.png" width="1350" height="920"><br>
+        &nbsp;</li>
+      <li> Queries:<br>
+        <img src="assets/images/doc-84.png" width="1350" height="1186"><br>
+        &nbsp;</li>
+      <li> Heading:<br>
+        <img src="assets/images/doc-85.png" width="1350" height="900"><br>
+        &nbsp;</li>
+    </ol>
+    <p> <strong>Posts Slider</strong> (There are 6 layouts):</p>
+    <ol>
+      <li> Layouts:<br>
+        <img src="assets/images/doc-86.png" width="1350" height="700"><br>
+        &nbsp;</li>
+      <li> Queries:<br>
+        <img src="assets/images/doc-87.png" width="1350" height="800"><br>
+        &nbsp;</li>
+      <li> Heading:<br>
+        <img src="assets/images/doc-88.png" width="1350" height="810"></li>
+    </ol>
+  </section>
+  <section id="update">
+    <div class="page-header">
+      <h3>Update</h3>
+      <hr class="notop">
+    </div>
+    <p> The Envato Market WordPress Plugin makes it easy for Theme &amp; Plugin authors to deliver updates to their customers.</p>
+    <h4 id="update_envato_market_plugin_installation">Envato Market Plugin Installation</h4>
+    <p> The very first step is to download the Envato Market plugin. This is available on Envato (as well as via Github) and is completely free. All you need to do is click on the button below to go to the Envato Market plugin page and click on the Download button:&nbsp;<a href="https://www.envato.com/lp/market-plugin/"><strong>https://www.envato.com/lp/market-plugin/</strong></a></p>
+    <p> This will download the zip file with the plugin in it. No need to unzip it &ndash; we&rsquo;ll be installing it as is. Now that you have the plugin, go ahead and log into your WordPress installation that you want to add auto-updates to.</p>
+    <p> To install the plugin navigate to Plugins &gt; Add New and click on the Upload Plugin button at the top of the page.</p>
+    <p> Next browse for the <strong>envato-market.zip</strong> file that you downloaded from Github.</p>
+    <p> Then click the button to Install Now and when prompted click the Activate Plugin link.</p>
+    <p> Now that the plugin is installed and active you should see a new Envato Market menu item in your WordPress dashboard.</p>
+    <h4 id="update_envato_market_plugin_setup">Envato Market Plugin Setup</h4>
+    <div> The next step is to sync the Envato Market plugin with your Envato account to have access to all of your marketplace purchases as well as item updates.<br>
+      <img src="assets/images/doc-89.png" width="1350" height="1120"></div>
+    <div> &nbsp;</div>
+    <div> To get started click on the Envato Market link in your dashboard menu. You should see a screen similar to the one above. The very first step is to create an Envato API token. To do this, click on the generate a personal token link (highlighted in red above).<br>
+      <img src="assets/images/doc-90.png" width="1350" height="1255"></div>
+    <div> &nbsp;</div>
+    <div> If you&rsquo;re already logged into your Envato account you&rsquo;ll be taken to the screen above (otherwise you will be prompted to login first before being redirected to this page). On this screen you can see what the Envato Market plugin is requesting permission to access via your Envato account (Envato sites, the ability to download your items, a list of your purchases and verification of your purchases).</div>
+    <div> &nbsp;</div>
+    <div> To proceed give your token a name, check the box that you have read and agree to the terms and then click the green button to create your token.<br>
+      <img src="assets/images/doc-91.png" width="1350" height="800"></div>
+    <div> &nbsp;</div>
+    <div> Once your token is created you will see a green success screen. Copy your token code (this is very important since Envato doesn&rsquo;t store a copy of the token for you), check to confirm that you&rsquo;ve copied it and click the white button that you got it.</div>
+    <div> &nbsp;</div>
+    <div> Now go back to your WordPress installation and paste in your Envato API token then click save.<br>
+      <img src="assets/images/doc-92.png" width="1350" height="1085"></div>
+    <div> &nbsp;</div>
+    <div> It&rsquo;s possible that you might see the error above when you first enter your token. Don&rsquo;t worry, just go back to the previous page and try again. It should work on the second go.</div>
+    <div> &nbsp;</div>
+    <div> Once your token is saved and validated your page will refresh to show your Envato Market landing page with added tabs for your items. The added tab(s) display all of your theme and plugin purchases as well as their version numbers and quick links to the theme and author pages.</div>
+    <div> &nbsp;</div>
+    <hr class="notop">
+    <div> &nbsp;</div>
+    <div> Please note, after successful theme update, keep updating <strong>Beeteam368 Extensions</strong> plugin and <strong>Beeteam368 Extensions Pro</strong> plugin:<br>
+      <img src="assets/images/doc-134.png" width="1350" height="960"></div>
+  </section>
+</div>
+</body>
+</html>
