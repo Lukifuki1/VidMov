@@ -1,0 +1,186 @@
+/**
+ * VidGamify PRO Frontend Styles
+ */
+
+/* Widget Base Styles */
+.vidgamify-widget {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.vidgamify-widget h3 {
+    margin-top: 0;
+    color: #2271b1;
+    font-size: 16px;
+    border-bottom: 2px solid #f0a500;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* XP Progress Widget */
+.level-badge {
+    display: inline-block;
+    background: linear-gradient(90deg, #f0a500, #d48800);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.level-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.progress-bar-container {
+    margin-top: 15px;
+}
+
+.progress-bar {
+    height: 24px;
+    background: #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #46b450, #00a32a);
+    transition: width 0.5s ease;
+}
+
+/* Achievements Widget */
+.achieements-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.achievement-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.achievement-item:last-child {
+    border-bottom: none;
+}
+
+.achievement-icon {
+    font-size: 24px;
+    color: #f0a500;
+}
+
+/* Leaderboard Widget */
+.leaderboard-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.leaderboard-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.leaderboard-item:last-child {
+    border-bottom: none;
+}
+
+.rank-number,
+.medal {
+    font-weight: bold;
+    color: #f0a500;
+    min-width: 30px;
+    text-align: center;
+}
+
+.medal {
+    font-size: 24px;
+}
+
+.leaderboard-item a {
+    color: #2271b1;
+    text-decoration: none;
+}
+
+.leaderboard-item a:hover {
+    text-decoration: underline;
+}
+
+/* Streak Widget */
+.streak-display {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    padding: 15px;
+    background: #fff8e1;
+    border-radius: 8px;
+}
+
+.fire-icon {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.streak-number {
+    font-size: 36px;
+    font-weight: bold;
+    color: #f0a500;
+}
+
+/* Social Stats Widget */
+.social-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    text-align: center;
+}
+
+.stat-item {
+    background: #f6f7f7;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.stat-number {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    color: #2271b1;
+}
+
+.stat-label {
+    display: block;
+    font-size: 12px;
+    color: #646970;
+    margin-top: 5px;
+}
+
+/* Responsive */
+@media (max-width: 782px) {
+    .social-stat-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .level-badge {
+        font-size: 14px;
+        padding: 3px 10px;
+    }
+}
