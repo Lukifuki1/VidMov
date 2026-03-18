@@ -16,7 +16,6 @@ if (!class_exists('beeteam368_roles_pro')) {
 				$capabilities[] = BEETEAM368_PREFIX . '_ffmpeg_control_settings';
 				$capabilities[] = BEETEAM368_PREFIX . '_bunny_cdn_settings';
 				$capabilities[] = BEETEAM368_PREFIX . '_woocommerce_settings';
-				$capabilities[] = BEETEAM368_PREFIX . '_buycred_settings';
 				$capabilities[] = BEETEAM368_PREFIX . '_live_streaming_settings';
 				$capabilities[] = BEETEAM368_PREFIX . '_quizzes_settings';
                 return $capabilities;
@@ -66,7 +65,6 @@ if(!function_exists('beeteam368_vidmov_extensions_vrf')){
 							$_GET['page'] == BEETEAM368_PREFIX . '_ffmpeg_control_settings' ||
 							$_GET['page'] == BEETEAM368_PREFIX . '_bunny_cdn_settings' ||
 							$_GET['page'] == BEETEAM368_PREFIX . '_woocommerce_settings' ||
-							$_GET['page'] == BEETEAM368_PREFIX . '_buycred_settings' ||
 							$_GET['page'] == BEETEAM368_PREFIX . '_live_streaming_settings' ||
 							$_GET['page'] == BEETEAM368_PREFIX . '_quizzes_settings' || 
 							$_GET['page'] == BEETEAM368_PREFIX . '_image_settings' || 

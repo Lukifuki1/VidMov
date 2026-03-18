@@ -10,14 +10,10 @@ if (!class_exists('beeteam368_autoload_pro')) {
             require BEETEAM368_EXTENSIONS_PRO_PATH . 'inc/pro-player/pro-player.php';
             require BEETEAM368_EXTENSIONS_PRO_PATH . 'elementor/addons-pro.php';
 			
-			require BEETEAM368_EXTENSIONS_PRO_PATH . 'inc/sample-data/sample-data.php';
 
             $require_pro_array = array(
 				array('_membership', '_theme_settings', 'on', BEETEAM368_EXTENSIONS_PRO_PATH . 'inc/membership/membership.php'),
                 array('_member_verification', '_theme_settings', 'on', BEETEAM368_EXTENSIONS_PRO_PATH . 'inc/member-verification/member-verification.php'),
-                array('_virtual_gifts', '_theme_settings', 'on', BEETEAM368_EXTENSIONS_PRO_PATH . 'inc/virtual-gifts/virtual-gifts.php'),
-				array('_buycred', '_theme_settings', 'on', BEETEAM368_EXTENSIONS_PRO_PATH . 'inc/buycred/buycred.php'),
-				array('_mycred_sell_content', '_theme_settings', 'on', BEETEAM368_EXTENSIONS_PRO_PATH . 'inc/mycred-sell-content/mycred-sell-content.php'),
                 array('_trending', '_theme_settings', 'on', BEETEAM368_EXTENSIONS_PRO_PATH . 'inc/trending/trending.php'),
                 array('_history', '_theme_settings', 'on', BEETEAM368_EXTENSIONS_PRO_PATH . 'inc/history/history.php'),
                 array('_youtube_import', '_theme_settings', 'on', BEETEAM368_EXTENSIONS_PRO_PATH . 'inc/youtube-import/youtube-import.php'),
@@ -47,7 +43,6 @@ if (!class_exists('beeteam368_autoload_pro')) {
             }
 			
 			if(class_exists('myCRED_Hook', false)){
-				require BEETEAM368_EXTENSIONS_PRO_PATH . 'inc/mycred-hook/mycred-hook.php';
 			}
 
             foreach ($require_pro_array as $require_pro_setting) {

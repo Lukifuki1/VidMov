@@ -972,7 +972,6 @@ if (!class_exists('beeteam368_login_register_front_end')) {
 						return add_query_arg(array('random_query' => time()), beeteam368_channel_front_end::get_channel_url($user_id, array('channel-tab' => apply_filters('beeteam368_channel_transfer_history_tab_name', 'transfer_history'))) );
 						break;
 						
-					case 'buycred_page':
 						return add_query_arg(array('random_query' => time()), apply_filters('beeteam368_redirect_buy_cred', home_url('/')) );
 						break;												
 				}

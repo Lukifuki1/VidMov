@@ -66,11 +66,6 @@ if (!class_exists('beeteam368_settings_pro')) {
 			$options[] = BEETEAM368_PREFIX . '_membership_plans_page';
 			$options[] = BEETEAM368_PREFIX . '_membership_transactions_page';
             $options[] = BEETEAM368_PREFIX . '_member_verification';
-            $options[] = BEETEAM368_PREFIX . '_virtual_gifts';
-			$options[] = BEETEAM368_PREFIX . '_virtual_gifts_default_bonus_points';
-			$options[] = BEETEAM368_PREFIX . '_buycred';
-			$options[] = BEETEAM368_PREFIX . '_buycred_page';
-			$options[] = BEETEAM368_PREFIX . '_mycred_sell_content';
             $options[] = BEETEAM368_PREFIX . '_history';
             $options[] = BEETEAM368_PREFIX . '_youtube_import';
             $options[] = BEETEAM368_PREFIX . '_vimeo_import';
@@ -182,7 +177,6 @@ if (!class_exists('beeteam368_settings_pro')) {
             $settings_options->add_field(array(
                 'name' => esc_html__('Virtual Gifts (PRO)', 'beeteam368-extensions-pro'),
                 'desc' => esc_html__('Turn ON/OFF "Virtual Gifts" feature for your theme. You need to install the myCred plugin to use this feature.', 'beeteam368-extensions-pro'),
-                'id' => BEETEAM368_PREFIX . '_virtual_gifts',
                 'type' => 'select',
                 'default' => 'on',
                 'options' => array(
@@ -193,11 +187,9 @@ if (!class_exists('beeteam368_settings_pro')) {
 				$settings_options->add_field(array(
 					'name' => esc_html__('Default Bonus Points (PRO)', 'beeteam368-extensions-pro'),
 					'desc' => esc_html__('The number of points displayed for users to choose before giving away. Separated by commas, eg: 50,100,250...', 'beeteam368-extensions-pro'),
-					'id' => BEETEAM368_PREFIX . '_virtual_gifts_default_bonus_points',
 					'type' => 'text',
 					'default' => '',
 					'attributes' => array(
-						'data-conditional-id' => BEETEAM368_PREFIX . '_virtual_gifts',
 						'data-conditional-value' => 'on',
 					),				
 				));
@@ -205,7 +197,6 @@ if (!class_exists('beeteam368_settings_pro')) {
 			$settings_options->add_field(array(
                 'name' => esc_html__('buyCred (PRO)', 'beeteam368-extensions-pro'),
                 'desc' => esc_html__('Turn ON/OFF "buyCred" feature for your theme. You need to install the myCred plugin to use this feature.', 'beeteam368-extensions-pro'),
-                'id' => BEETEAM368_PREFIX . '_buycred',
                 'type' => 'select',
                 'default' => 'on',
                 'options' => array(
@@ -216,13 +207,11 @@ if (!class_exists('beeteam368_settings_pro')) {
 				$settings_options->add_field(array(
 					'name' => esc_html__('buyCred Page (PRO)', 'beeteam368-extensions-pro'),
 					'desc' => esc_html__('Use the magnifying glass icon next to the input box to find and select the appropriate page. "Remember to save the permalink settings again in Settings > Permalinks".', 'beeteam368-extensions-pro'),
-					'id' => BEETEAM368_PREFIX . '_buycred_page',
 					'type' => 'post_search_text',
 					'post_type' => 'page',
 					'select_type' => 'radio',
 					'select_behavior' => 'replace',
 					'attributes' => array(
-						'data-conditional-id' => BEETEAM368_PREFIX . '_buycred',
 						'data-conditional-value' => 'on',
 					),
 				));
@@ -230,7 +219,6 @@ if (!class_exists('beeteam368_settings_pro')) {
 			$settings_options->add_field(array(
                 'name' => esc_html__('myCred Sell Content (PRO)', 'beeteam368-extensions-pro'),
                 'desc' => esc_html__('Turn ON/OFF "myCred Sell Content" feature for your theme. You need to install the myCred plugin to use this feature.', 'beeteam368-extensions-pro'),
-                'id' => BEETEAM368_PREFIX . '_mycred_sell_content',
                 'type' => 'select',
                 'default' => 'on',
                 'options' => array(
